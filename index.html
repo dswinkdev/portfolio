@@ -13,8 +13,6 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Custom Styles -->
@@ -22,26 +20,23 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top left, #0f172a, #020617);
-      color: #e2e8f0;
+      background: linear-gradient(145deg, #000000, #111111);
+      color: #f4f4f5;
       overflow-x: hidden;
       min-height: 100vh;
       position: relative;
     }
 
     body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url("assets/starry-background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.1;
-  pointer-events: none;
-  z-index: 0;
-
-  /* Test: add this */
-  background-color: rgba(255, 0, 0, 0.2); /* translucent red */
-}
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("assets/starry-background.jpg") no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
 
     .hero {
       position: relative;
@@ -51,12 +46,7 @@
       align-items: center;
       justify-content: center;
       gap: 4rem;
-      background: url('https://www.transparenttextures.com/patterns/stardust.png'), 
-                  radial-gradient(circle at right, #1e293b 10%, #0f172a 80%);
-      background-blend-mode: overlay;
-      background-repeat: repeat;
-      background-position: center;
-      background-attachment: fixed;
+      background: linear-gradient(135deg, #0f0f0f 10%, #1a1a1a 90%);
       z-index: 1;
     }
 
@@ -67,36 +57,37 @@
     .hero h1 {
       font-size: 3rem;
       font-weight: 900;
+      line-height: 1.2;
     }
 
     .hero h1 span {
-      color: #6366f1; /* Electric Indigo */
+      color: #e11d48;
     }
 
     .hero p {
-      color: #cbd5e1;
+      color: #d4d4d8;
       margin-top: 1rem;
       font-size: 1.1rem;
     }
 
     .btn-custom {
       margin-top: 2rem;
-      background-color: #6366f1;
+      background-color: #e11d48;
       border: none;
       color: white;
       padding: 0.75rem 1.5rem;
-      border-radius: 50px;
+      border-radius: 40px;
       transition: all 0.3s ease;
     }
 
     .btn-custom:hover {
-      background-color: #4f46e5; /* Deeper Electric Indigo */
+      background-color: #be123c;
     }
 
     .hero-image img {
       max-width: 350px;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+      box-shadow: 0 0 20px rgba(225, 29, 72, 0.4);
     }
 
     .sidebar {
@@ -111,14 +102,45 @@
     }
 
     .sidebar a {
-      color: #cbd5e1;
+      color: #d4d4d8;
       text-decoration: none;
       font-size: 1.5rem;
       transition: color 0.2s ease;
     }
 
     .sidebar a:hover {
-      color: #6366f1;
+      color: #e11d48;
+    }
+
+    #projects {
+      background: #0e0e0e;
+      padding: 4rem 2rem;
+    }
+
+    #projects h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 3rem;
+      color: #fafafa;
+    }
+
+    .card {
+      background-color: #1f1f1f;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      font-weight: 700;
+      color: #e11d48;
+    }
+
+    .card-text {
+      color: #e5e7eb;
     }
 
     @media (max-width: 768px) {
@@ -132,6 +154,10 @@
         width: 80%;
         max-width: 300px;
         margin: 0 auto;
+      }
+
+      .sidebar {
+        display: none;
       }
     }
   </style>
@@ -150,13 +176,53 @@
     </div>
   </section>
 
+ <!-- Projects Section -->
+<section id="projects" class="container">
+  <h2 class="text-center">Project Highlights</h2>
+  <div class="row g-5">
+
+    <!-- EvenTrack Artifact -->
+    <div class="col-md-6">
+      <div class="card text-light shadow-lg h-100">
+        <a href="https://www.youtube.com/watch?v=your_eventrack_video" target="_blank">
+          <img src="https://img.youtube.com/vi/your_eventrack_video/hqdefault.jpg" class="card-img-top" alt="EvenTrack Thumbnail">
+        </a>
+        <div class="card-body">
+          <h3 class="card-title" style="color: #ef4444;">EvenTrack</h3>
+          <p class="card-text">
+            EvenTrack is a mobile app designed to help users track and manage events they're interested in. Built using Android Studio with Firebase integration, it offers intuitive UI design, real-time event updates, and SMS notifications.
+          </p>
+          <a href="https://www.youtube.com/watch?v=your_eventrack_video" target="_blank" class="btn btn-custom">Watch Code Review</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course Navigator Pro Artifact -->
+    <div class="col-md-6">
+      <div class="card text-light shadow-lg h-100">
+        <a href="https://youtu.be/ObTQsi6Gslo" target="_blank">
+          <img src="https://img.youtube.com/vi/ObTQsi6Gslo/hqdefault.jpg" class="card-img-top" alt="Course Navigator Pro Thumbnail">
+        </a>
+        <div class="card-body">
+          <h3 class="card-title" style="color: #ef4444;">Course Navigator Pro</h3>
+          <p class="card-text">
+            Course Navigator Pro is a desktop application that loads, sorts, and analyzes course data using three data structures: Binary Search Tree, Hash Table, and Vector. It was designed for academic advisors and includes detailed pseudocode and runtime analysis.
+          </p>
+          <a href="https://youtu.be/ObTQsi6Gslo" target="_blank" class="btn btn-custom">Watch Code Review</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
   <!-- Sidebar Icons -->
   <div class="sidebar">
     <a href="#"><i class="bi bi-house-door-fill"></i></a>
     <a href="#"><i class="bi bi-person-fill"></i></a>
     <a href="#"><i class="bi bi-briefcase-fill"></i></a>
     <a href="#"><i class="bi bi-chat-dots-fill"></i></a>
-    <a href="#"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/" target="_blank"><i class="bi bi-github"></i></a>
   </div>
 
 </body>
