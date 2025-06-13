@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Derricko Swink | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/DSwink-favicon.ico">
-  <meta name="keywords" content="Derricko Swink, Software Developer, Graphic Design, Java, Full-Stack, Web Development"/>
+  <meta name="keywords"
+    content="Derricko Swink, Software Developer, Graphic Design, Java, Full-Stack, Web Development" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -14,7 +16,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Custom Styles -->
   <style>
     body {
       margin: 0;
@@ -29,34 +30,44 @@
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url("assets/starry-background.jpg") no-repeat center center fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("assets/starry-background.jpg") repeat center center fixed;
       background-size: cover;
       opacity: 0.05;
       pointer-events: none;
       z-index: 0;
     }
 
+    section {
+      padding: 5rem 2rem;
+    }
+
     .hero {
-      position: relative;
-      padding: 4rem 2rem;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 4rem;
       background: linear-gradient(135deg, #0f0f0f 10%, #1a1a1a 90%);
+      position: relative;
       z-index: 1;
     }
 
     .hero-content {
       max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero h1 {
       font-size: 3rem;
       font-weight: 900;
       line-height: 1.2;
+      margin-bottom: 1rem;
     }
 
     .hero h1 span {
@@ -65,19 +76,24 @@
 
     .hero p {
       color: #d4d4d8;
-      margin-top: 1rem;
       font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
 
     .btn-custom {
-      margin-top: 2rem;
       background-color: #e11d48;
       border: none;
       color: white;
-      padding: 0.75rem 1.5rem;
+      padding: 0.5rem 1rem;
+      /* reduced padding */
       border-radius: 40px;
+      display: inline-block;
+      /* allows width to match content */
       transition: all 0.3s ease;
+      text-decoration: none;
+      font-size: 1rem;
     }
+
 
     .btn-custom:hover {
       background-color: #be123c;
@@ -113,13 +129,12 @@
 
     #projects {
       background: #0e0e0e;
-      padding: 4rem 2rem;
     }
 
     #projects h2 {
       font-size: 2.5rem;
       font-weight: 900;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       color: #fafafa;
     }
 
@@ -127,6 +142,7 @@
       background-color: #1f1f1f;
       border: none;
       transition: transform 0.3s ease;
+      padding-bottom: 1rem;
     }
 
     .card:hover {
@@ -136,10 +152,31 @@
     .card-title {
       font-weight: 700;
       color: #e11d48;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .card-text {
       color: #e5e7eb;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .card-img-top {
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    figure {
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: #a1a1aa;
     }
 
     @media (max-width: 768px) {
@@ -161,13 +198,15 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Transforming Ideas<br><span>Into Digital Reality</span></h1>
-      <p>Hi, I’m Derricko Swink — a creative technologist, designer, and developer driven by meaningful digital experiences.</p>
+      <p>Hi, I’m Derricko Swink — a creative technologist, designer, and developer driven by meaningful digital
+        experiences.</p>
       <a href="#projects" class="btn btn-custom">My Projects</a>
     </div>
     <div class="hero-image">
@@ -185,20 +224,36 @@
         <div class="card text-light shadow-lg h-100">
           <figure>
             <a href="https://www.youtube.com/watch?v=your_eventrack_video" target="_blank">
-              <img src="assets/EvenTrack_app-mocks.jpeg" class="card-img-top" alt="EvenTrack Thumbnail">
+              <img src="assets/logo_crowd.png" class="card-img-top" alt="EvenTrack Thumbnail">
             </a>
             <figcaption class="image-caption small">Project: UI/UX Redesign & Code Enhancement</figcaption>
           </figure>
           <div class="card-body">
             <h3 class="card-title">EvenTrack</h3>
             <p class="card-text">
-              <i>EvenTrack</i> is a mobile app designed to help users track and manage events they're interested in. Built using Android Studio with Firebase integration, it offers intuitive UI design, real-time event updates, and SMS notifications.
+              <i>EvenTrack</i> is a mobile app designed to help users track and manage events. Built with Android Studio
+              and Firebase, it features real-time updates and SMS notifications.
             </p>
-            <a href="https://www.youtube.com/watch?v=your_eventrack_video" target="_blank" class="btn btn-custom">Watch Code Review</a>
+            <a href="https://www.youtube.com/watch?v=your_eventrack_video" target="_blank"
+              class="btn btn-custom mb-3">Watch Code Review</a>
+
+            <img src="assets/sax.png" class="card-img-top" alt="band group">
+            <h3 class="card-title">Original Prototype</h3>
+            <p class="card-text">
+              Initially developed early in my computer science journey, the app allowed users to input an event, time,
+              date, and note. It laid the foundation for a more refined tool.
+            </p>
+
+            <img src="assets/original_prototype.png" class="card-img-top" alt="EvenTrack - Initial Development">
+            <h3 class="card-title">Enhanced Prototype</h3>
+            <img src="assets/enhanced_prototype.png" class="card-img-top" alt="EvenTrack - Enhanced Development">
+            <p class="card-text">
+              With improved performance and functionality, the enhanced prototype represents a polished and scalable
+              event tracking experience.
+            </p>
           </div>
         </div>
       </div>
-      
 
       <!-- Course Navigator Pro Artifact -->
       <div class="col-md-6">
@@ -207,18 +262,22 @@
             <a href="https://youtu.be/ObTQsi6Gslo" target="_blank">
               <img src="assets/CourseNavigatorPro_code2.jpg" class="card-img-top" alt="Course Navigator Pro Thumbnail">
             </a>
-            <figcaption class="image-caption small">Project: Java Conversion, Algorithm & Database Enhancement</figcaption>
+            <figcaption class="image-caption small">Project: Java Conversion, Algorithm & Database Enhancement
+            </figcaption>
           </figure>
           <div class="card-body">
             <h3 class="card-title">Course Navigator Pro</h3>
             <p class="card-text">
-              <i>Course Navigator Pro</i> is a desktop application that loads, sorts, and analyzes course data using three data structures: Binary Search Tree, Hash Table, and Vector. It was designed for academic advisors and includes detailed pseudocode and runtime analysis.
+              <i>Course Navigator Pro</i> is a desktop tool that analyzes course data using Binary Search Tree, Hash
+              Table, and Vector structures. Designed for academic advisors, it includes detailed pseudocode and runtime
+              analysis.
             </p>
             <a href="https://youtu.be/ObTQsi6Gslo" target="_blank" class="btn btn-custom">Watch Code Review</a>
           </div>
         </div>
       </div>
-      
+
+    </div>
   </section>
 
   <!-- Sidebar Icons -->
@@ -231,4 +290,5 @@
   </div>
 
 </body>
+
 </html>
