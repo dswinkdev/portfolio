@@ -61,6 +61,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-right: 1.5rem;
     }
 
     .hero h1 {
@@ -85,15 +86,12 @@
       border: none;
       color: white;
       padding: 0.5rem 1rem;
-      /* reduced padding */
       border-radius: 40px;
       display: inline-block;
-      /* allows width to match content */
       transition: all 0.3s ease;
       text-decoration: none;
       font-size: 1rem;
     }
-
 
     .btn-custom:hover {
       background-color: #be123c;
@@ -149,6 +147,11 @@
       transform: translateY(-5px);
     }
 
+    .card-body {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
     .card-title {
       font-weight: 700;
       color: #e11d48;
@@ -184,6 +187,16 @@
         flex-direction: column;
         text-align: center;
         gap: 2rem;
+      }
+
+      .hero-content {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+
+      .card-body {
+        padding-right: 1rem;
+        padding-left: 1rem;
       }
 
       .hero-image img {
@@ -243,7 +256,6 @@
               Initially developed early in my computer science journey, the app allowed users to input an event, time,
               date, and note. It laid the foundation for a more refined tool.
             </p>
-
             <img src="assets/original_prototype.png" class="card-img-top" alt="EvenTrack - Initial Development">
             <h3 class="card-title"><i>Enhanced</i> Prototype</h3>
             <img src="assets/enhanced_prototype.png" class="card-img-top" alt="EvenTrack - Enhanced Development">
@@ -251,6 +263,8 @@
               With improved performance and functionality, the enhanced prototype represents a polished and scalable
               event tracking experience.
             </p>
+            <img src="assets/EvenTrack_buttons.png" class="card-img-top" alt="EvenTrack buttons">
+            <img src="assets/EvenTrack_text.jpg" class="card-img-top" alt="EvenTrack buttons">
           </div>
         </div>
       </div>
@@ -262,8 +276,7 @@
             <a href="https://youtu.be/ObTQsi6Gslo" target="_blank">
               <img src="assets/CourseNavigatorPro_code2.jpg" class="card-img-top" alt="Course Navigator Pro Thumbnail">
             </a>
-            <figcaption class="image-caption small">Project Objective: Java Conversion, Algorithm & Database Enhancement
-            </figcaption>
+            <figcaption class="image-caption small">Project Objective: Java Conversion, Algorithm & Database Enhancement</figcaption>
           </figure>
           <div class="card-body">
             <h3 class="card-title">Course Navigator Pro</h3>
@@ -274,6 +287,18 @@
             </p>
             <a href="https://youtu.be/ObTQsi6Gslo" target="_blank" class="btn btn-custom">Watch Code Review</a>
           </div>
+          <img src="assets/CNPro_AVL Tree.png" class="card-img-top" alt="AVL tree image">
+          <h3 class="card-title">Original Prototype w/ Binary Search Tree</h3>
+          <p class="card-text">
+            ABC University was developed as a C++ project, that allowed users to input course data and retrieve information. The search function is based on a Binary Search Tree, providing efficient data retrieval.
+          </p>
+          <img src="assets/ABC University_BST.png" class="card-img-top" alt="EvenTrack - Initial Development">
+          <h3 class="card-title"><i>Enhanced</i> Prototype w/ AVL Tree</h3>
+          <img src="assets/AVLtreeCode.png" class="card-img-top" alt="EvenTrack - Enhanced Development">
+          <p class="card-text">
+            With improved performance and functionality, the enhanced prototype represents a polished and scalable
+            event tracking experience.
+          </p>
         </div>
       </div>
 
