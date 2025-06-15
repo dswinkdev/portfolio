@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS and Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
   <style>
     body {
@@ -97,6 +97,7 @@
       margin-right: 0.5rem;
     }
 
+    /* Sidebar for desktop */
     .sidebar {
       position: fixed;
       right: 1rem;
@@ -119,15 +120,82 @@
       color: #e11d48;
     }
 
+    /* Mobile nav button */
+    .mobile-nav-button {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1000;
+      background: transparent;
+      border: none;
+      color: #e11d48;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* Mobile nav panel */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 200px;
+      background: #1f1f1f;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.7);
+      padding-top: 4rem;
+      flex-direction: column;
+      gap: 1.5rem;
+      z-index: 9999;
+      transition: transform 0.3s ease;
+      transform: translateX(-100%);
+    }
+
+    .mobile-nav.show {
+      display: flex;
+      transform: translateX(0);
+    }
+
+    .mobile-nav a {
+      color: #d4d4d8;
+      font-size: 1.75rem;
+      text-align: center;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .mobile-nav a:hover {
+      color: #e11d48;
+    }
+
+    /* Hide sidebar on mobile */
     @media (max-width: 768px) {
       .sidebar {
         display: none;
+      }
+
+      .mobile-nav-button {
+        display: block;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <button class="mobile-nav-button" aria-label="Toggle navigation" id="mobile-nav-toggle">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
+    <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
+    <a href="projects.html" aria-label="Projects"><i class="bi bi-briefcase-fill"></i></a>
+    <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="https://github.com/dswinkdev" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/daswink" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+  </nav>
 
   <div class="contact-section">
     <h1>Contact Me</h1>
@@ -156,15 +224,31 @@
     </div>
   </div>
 
-  <!-- Sidebar Icons -->
-<div class="sidebar">
-    <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
-    <a href="about.html"><i class="bi bi-person-fill"></i></a>
-    <a href="projects.html"><i class="bi bi-briefcase-fill"></i></a>
-    <a href="contact.html"><i class="bi bi-chat-dots-fill"></i></a>
-    <a href="https://github.com/dswinkdev" target="_blank"><i class="bi bi-github"></i></a>
-    <a href="https://www.linkedin.com/in/daswink" target="_blank"><i class="bi bi-linkedin"></i></a>
-  </div>  
+  <!-- Sidebar Icons (desktop only) -->
+  <div class="sidebar">
+    <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
+    <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
+    <a href="projects.html" aria-label="Projects"><i class="bi bi-briefcase-fill"></i></a>
+    <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="https://github.com/dswinkdev" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/daswink" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('mobile-nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('show');
+    });
+
+    // Optional: Close mobile nav when clicking a link inside it
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('show');
+      });
+    });
+  </script>
 
 </body>
 

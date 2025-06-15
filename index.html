@@ -5,21 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Derricko Swink | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="assets/DSwink-favicon.ico">
-  <meta name="keywords"
-    content="Derricko Swink, Software Developer, Graphic Design, Java, Full-Stack, Web Development" />
+  <link rel="icon" type="image/x-icon" href="assets/DSwink-favicon.ico" />
+  <meta name="keywords" content="Derricko Swink, Software Developer, Graphic Design, Java, Full-Stack, Web Development" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       background: linear-gradient(145deg, #000000, #111111);
       color: #f4f4f5;
       overflow-x: hidden;
@@ -182,6 +181,48 @@
       color: #a1a1aa;
     }
 
+    /* Mobile Navigation Styles */
+    #mobile-nav-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1100;
+      background: #e11d48;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 220px;
+      background: #111;
+      padding-top: 4rem;
+      z-index: 1099;
+      box-shadow: -3px 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #mobile-nav a {
+      display: block;
+      padding: 1rem 2rem;
+      color: #d4d4d8;
+      text-decoration: none;
+      border-bottom: 1px solid #222;
+      font-size: 1.1rem;
+    }
+
+    #mobile-nav a:hover {
+      color: #e11d48;
+    }
+
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -208,22 +249,40 @@
       .sidebar {
         display: none;
       }
+
+      #mobile-nav-toggle {
+        display: block;
+      }
     }
   </style>
 </head>
 
 <body>
+  <!-- Mobile Navigation Toggle Button -->
+  <button id="mobile-nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+  <!-- Mobile Navigation Menu -->
+  <nav id="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://github.com/dswinkdev" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/daswink" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Transforming <span>Ideas</span><br>Into<span> Digital Reality</span></h1>
-      <p>Hi, I’m Derricko Swink — a creative technologist, senior graphic designer, and software engineer driven by meaningful digital
-        experiences.</p>
+      <h1>Transforming <span>Ideas</span><br />Into<span> Digital Reality</span></h1>
+      <p>
+        Hi, I’m Derricko Swink — a creative technologist, senior graphic designer, and software engineer driven by
+        meaningful digital experiences.
+      </p>
       <a href="#projects" class="btn btn-custom">My Projects</a>
     </div>
     <div class="hero-image">
-      <img src="assets/Derricko-Swink.jpg" alt="Derricko Swink" class="img-fluid">
+      <img src="assets/Derricko-Swink.jpg" alt="Derricko Swink" class="img-fluid" />
     </div>
   </section>
 
@@ -231,40 +290,40 @@
   <section id="projects" class="container">
     <h2 class="text-center">Project Highlights</h2>
     <div class="row g-5">
-
       <!-- EvenTrack Artifact -->
       <div class="col-md-6">
         <div class="card text-light shadow-lg h-100">
           <figure>
-            <a href="https://youtu.be/mElTleCq7fs" target="_blank">
-              <img src="assets/logo_crowd.png" class="card-img-top" alt="EvenTrack Thumbnail">
+            <a href="https://youtu.be/mElTleCq7fs" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo_crowd.png" class="card-img-top" alt="EvenTrack Thumbnail" />
             </a>
-            <figcaption class="image-caption small">Project Objective: UI/UX Redesign & Code Enhancement</figcaption>
+            <figcaption class="image-caption small">
+              Project Objective: UI/UX Redesign &amp; Code Enhancement
+            </figcaption>
           </figure>
           <div class="card-body">
             <h3 class="card-title">EvenTrack</h3>
             <p class="card-text">
-              <i>EvenTrack</i> is a mobile app designed to help users track and manage events. Built with Android Studio
-              and Firebase, it features real-time updates and SMS notifications.
+              <i>EvenTrack</i> is a mobile app designed to help users track and manage events. Built with Android Studio and
+              Firebase, it features real-time updates and SMS notifications.
             </p>
-            <a href="https://youtu.be/mElTleCq7fs" target="_blank"
-              class="btn btn-custom mb-3">Watch Code Review</a>
+            <a href="https://youtu.be/mElTleCq7fs" target="_blank" class="btn btn-custom mb-3" rel="noopener noreferrer">Watch Code Review</a>
 
-            <img src="assets/sax.png" class="card-img-top" alt="band group">
+            <img src="assets/sax.png" class="card-img-top" alt="band group" />
             <h3 class="card-title">Original Prototype</h3>
             <p class="card-text">
-              Initially developed early in my computer science journey, the app allowed users to input an event, time,
-              date, and note. It laid the foundation for a more refined tool.
+              Initially developed early in my computer science journey, the app allowed users to input an event, time, date,
+              and note. It laid the foundation for a more refined tool.
             </p>
-            <img src="assets/original_prototype.png" class="card-img-top" alt="EvenTrack - Initial Development">
+            <img src="assets/original_prototype.png" class="card-img-top" alt="EvenTrack - Initial Development" />
             <h3 class="card-title">Enhanced Prototype</h3>
-            <img src="assets/enhanced_prototype.png" class="card-img-top" alt="EvenTrack - Enhanced Development">
+            <img src="assets/enhanced_prototype.png" class="card-img-top" alt="EvenTrack - Enhanced Development" />
             <p class="card-text">
-              With improved performance and functionality, the enhanced prototype represents a polished and scalable
-              event tracking experience.
+              With improved performance and functionality, the enhanced prototype represents a polished and scalable event
+              tracking experience.
             </p>
-            <img src="assets/EvenTrack_buttons.png" class="card-img-top" alt="EvenTrack buttons">
-            <img src="assets/EvenTrack_text.jpg" class="card-img-top" alt="EvenTrack buttons">
+            <img src="assets/EvenTrack_buttons.png" class="card-img-top" alt="EvenTrack buttons" />
+            <img src="assets/EvenTrack_text.jpg" class="card-img-top" alt="EvenTrack buttons" />
           </div>
         </div>
       </div>
@@ -273,60 +332,87 @@
       <div class="col-md-6">
         <div class="card text-light shadow-lg h-100">
           <figure>
-            <a href="https://youtu.be/ObTQsi6Gslo" target="_blank">
-              <img src="assets/CourseNavigatorPro_code2.jpg" class="card-img-top" alt="Course Navigator Pro Thumbnail">
+            <a href="https://youtu.be/ObTQsi6Gslo" target="_blank" rel="noopener noreferrer">
+              <img src="assets/CourseNavigatorPro_code2.jpg" class="card-img-top" alt="Course Navigator Pro Thumbnail" />
             </a>
-            <figcaption class="image-caption small">Project Objective: Java Conversion + Algorithm & Database Enhancement + Future Enhancements</figcaption>
+            <figcaption class="image-caption small">
+              Project Objective: Java Conversion + Algorithm &amp; Database Enhancement + Future Enhancements
+            </figcaption>
           </figure>
-          
 
           <div class="card-body">
             <h3 class="card-title">Course Navigator Pro</h3>
             <p class="card-text">
-              <i>Course Navigator Pro</i> is a desktop tool that analyzes course data using Binary Search Tree, Hash
-              Table, and Vector structures. Designed for academic advisors, it includes detailed pseudocode and runtime
-              analysis.
+              <i>Course Navigator Pro</i> is a desktop tool that analyzes course data using Binary Search Tree, Hash Table,
+              and Vector structures. Designed for academic advisors, it includes detailed pseudocode and runtime analysis.
             </p>
-            <a href="https://www.youtube.com/watch?v=ObTQsi6Gslo" target="_blank"
-   class="btn btn-custom mb-3">Watch Code Review</a>
+            <a href="https://www.youtube.com/watch?v=ObTQsi6Gslo" target="_blank" class="btn btn-custom mb-3" rel="noopener noreferrer">Watch Code Review</a>
 
-            <img src="assets/student.jpg" class="card-img-top" alt="band group">
+            <img src="assets/student.jpg" class="card-img-top" alt="band group" />
             <h3 class="card-title">Original Code (C++)</h3>
             <p class="card-text">
-              ABC University was developed as a C++ project, that allowed users to input course data and retrieve information. The search function is based on a Binary Search Tree, providing efficient data retrieval.
+              ABC University was developed as a C++ project, that allowed users to input course data and retrieve
+              information. The search function is based on a Binary Search Tree, providing efficient data retrieval.
             </p>
-            <img src="assets/ABC University_BST.png" class="card-img-top" alt="EvenTrack - Initial Development">
+            <img src="assets/ABC University_BST.png" class="card-img-top" alt="EvenTrack - Initial Development" />
             <h3 class="card-title">Enhanced Code (Java)</h3>
-            <img src="assets/AVLtreeCode.png" class="card-img-top" alt="EvenTrack - Enhanced Development">
+            <img src="assets/AVLtreeCode.png" class="card-img-top" alt="EvenTrack - Enhanced Development" />
             <p class="card-text">
-              With improved performance and functionality, the enhanced prototype represents a polished and scalable event tracking experience. One of the most significant upgrades was the implementation of an AVL tree, a self-balancing binary search tree that ensures optimal time complexity for insertions, deletions, and lookups. This data structure maintains strict balance by automatically adjusting its height after each operation, which guarantees O(log n) performance. As a result, the application can now handle larger volumes of course data more efficiently, providing academic advisors with faster and more reliable access to course details and prerequisites.
+              With improved performance and functionality, the enhanced prototype represents a polished and scalable event
+              tracking experience. One of the most significant upgrades was the implementation of an AVL tree, a self-balancing
+              binary search tree that ensures optimal time complexity for insertions, deletions, and lookups. This data
+              structure maintains strict balance by automatically adjusting its height after each operation, which guarantees
+              O(log n) performance. As a result, the application can now handle larger volumes of course data more efficiently,
+              providing academic advisors with faster and more reliable access to course details and prerequisites.
             </p>
           </div>
 
           <div class="card-body">
-           <h3 class="card-title">Future Enhancements</h3>
+            <h3 class="card-title">Future Enhancements</h3>
             <p class="card-text">
-              ABC University was developed as a C++ project, that allowed users to input course data and retrieve information. The search function is based on a Binary Search Tree, providing efficient data retrieval.
+              ABC University was developed as a C++ project, that allowed users to input course data and retrieve
+              information. The search function is based on a Binary Search Tree, providing efficient data retrieval.
             </p>
-            <img src="assets/CNPro_UI.png" class="card-img-top" alt="EvenTrack - Initial Development">
+            <img src="assets/CNPro_UI.png" class="card-img-top" alt="EvenTrack - Initial Development" />
           </div>
-          
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Sidebar Icons -->
-<div class="sidebar">
-  <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
-  <a href="about.html"><i class="bi bi-person-fill"></i></a>
-  <a href="projects.html"><i class="bi bi-briefcase-fill"></i></a>
-  <a href="contact.html"><i class="bi bi-chat-dots-fill"></i></a>
-  <a href="https://github.com/dswinkdev" target="_blank"><i class="bi bi-github"></i></a>
-  <a href="https://www.linkedin.com/in/daswink" target="_blank"><i class="bi bi-linkedin"></i></a>
-</div>
+  <div class="sidebar">
+    <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
+    <a href="about.html"><i class="bi bi-person-fill"></i></a>
+    <a href="projects.html"><i class="bi bi-briefcase-fill"></i></a>
+    <a href="contact.html"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="https://github.com/dswinkdev" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/daswink" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+  </div>
 
+  <script>
+    const toggleButton = document.getElementById("mobile-nav-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    toggleButton.addEventListener("click", () => {
+      if (mobileNav.style.display === "block") {
+        mobileNav.style.display = "none";
+      } else {
+        mobileNav.style.display = "block";
+      }
+    });
+
+    // Optional: close menu when clicking outside mobile nav
+    window.addEventListener("click", (e) => {
+      if (
+        mobileNav.style.display === "block" &&
+        !mobileNav.contains(e.target) &&
+        e.target !== toggleButton
+      ) {
+        mobileNav.style.display = "none";
+      }
+    });
+  </script>
 </body>
 
 </html>
