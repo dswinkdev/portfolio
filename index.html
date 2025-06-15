@@ -181,48 +181,6 @@
       color: #a1a1aa;
     }
 
-    /* Mobile Navigation Styles */
-    #mobile-nav-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1100;
-      background: #e11d48;
-      border: none;
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      color: white;
-      font-size: 1.8rem;
-      cursor: pointer;
-      display: none;
-    }
-
-    #mobile-nav {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100vh;
-      width: 220px;
-      background: #111;
-      padding-top: 4rem;
-      z-index: 1099;
-      box-shadow: -3px 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    #mobile-nav a {
-      display: block;
-      padding: 1rem 2rem;
-      color: #d4d4d8;
-      text-decoration: none;
-      border-bottom: 1px solid #222;
-      font-size: 1.1rem;
-    }
-
-    #mobile-nav a:hover {
-      color: #e11d48;
-    }
-
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -254,21 +212,74 @@
         display: block;
       }
     }
+
+     /* Mobile navigation styles */
+    .mobile-nav {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+      display: none; /* hidden on desktop */
+      flex-direction: column;
+      align-items: flex-end;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .hamburger {
+      background: transparent;
+      border: none;
+      color: #d4d4d8;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      margin-top: 0.5rem;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-menu a {
+      color: #d4d4d8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.2s ease;
+    }
+
+    .mobile-menu a:hover {
+      color: #e11d48;
+    }
+
+    /* Show hamburger on mobile, hide sidebar */
+    @media (max-width: 768px) {
+      .mobile-nav {
+        display: flex;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- Mobile Navigation Toggle Button -->
-  <button id="mobile-nav-toggle" aria-label="Toggle navigation">&#9776;</button>
 
-  <!-- Mobile Navigation Menu -->
-  <nav id="mobile-nav" aria-label="Mobile navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://github.com/dswinkdev" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/daswink" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <!-- Mobile Hamburger Menu -->
+<nav class="mobile-nav">
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="mobile-menu" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/dswinkdev" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/daswink" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.dswinkgfx.com" target="_blank" rel="noopener noreferrer">Design Portfolio</a>
+    </div>
   </nav>
 
   <!-- Hero Section -->
@@ -380,39 +391,32 @@
     </div>
   </section>
 
-  <!-- Sidebar Icons -->
+  <!-- Sidebar Icons (desktop only) -->
   <div class="sidebar">
-    <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
-    <a href="about.html"><i class="bi bi-person-fill"></i></a>
-    <a href="projects.html"><i class="bi bi-briefcase-fill"></i></a>
-    <a href="contact.html"><i class="bi bi-chat-dots-fill"></i></a>
-    <a href="https://github.com/dswinkdev" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
-    <a href="https://www.linkedin.com/in/daswink" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+    <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
+    <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
+    <a href="projects.html" aria-label="Projects"><i class="bi bi-briefcase-fill"></i></a>
+    <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="https://github.com/dswinkdev" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/daswink" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <a href="https://www.dswinkgfx.com" target="_blank" aria-label="Design Portfolio"><i class="bi bi-globe-americas"></i></a>
   </div>
 
   <script>
-    const toggleButton = document.getElementById("mobile-nav-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-    toggleButton.addEventListener("click", () => {
-      if (mobileNav.style.display === "block") {
-        mobileNav.style.display = "none";
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+      if (mobileMenu.hasAttribute('hidden')) {
+        mobileMenu.removeAttribute('hidden');
       } else {
-        mobileNav.style.display = "block";
-      }
-    });
-
-    // Optional: close menu when clicking outside mobile nav
-    window.addEventListener("click", (e) => {
-      if (
-        mobileNav.style.display === "block" &&
-        !mobileNav.contains(e.target) &&
-        e.target !== toggleButton
-      ) {
-        mobileNav.style.display = "none";
+        mobileMenu.setAttribute('hidden', '');
       }
     });
   </script>
+
 </body>
 
 </html>

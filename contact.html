@@ -120,63 +120,52 @@
       color: #e11d48;
     }
 
-    /* Mobile nav button */
-    .mobile-nav-button {
-      display: none;
+    /* Mobile navigation styles */
+    .mobile-nav {
       position: fixed;
       top: 1rem;
-      left: 1rem;
+      right: 1rem;
       z-index: 1000;
+      display: none; /* hidden on desktop */
+      flex-direction: column;
+      align-items: flex-end;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .hamburger {
       background: transparent;
       border: none;
-      color: #e11d48;
+      color: #d4d4d8;
       font-size: 2rem;
       cursor: pointer;
     }
 
-    /* Mobile nav panel */
-    .mobile-nav {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 200px;
-      background: #1f1f1f;
-      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.7);
-      padding-top: 4rem;
-      flex-direction: column;
-      gap: 1.5rem;
-      z-index: 9999;
-      transition: transform 0.3s ease;
-      transform: translateX(-100%);
-    }
-
-    .mobile-nav.show {
+    .mobile-menu {
+      margin-top: 0.5rem;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
       display: flex;
-      transform: translateX(0);
+      flex-direction: column;
+      gap: 1rem;
     }
 
-    .mobile-nav a {
+    .mobile-menu a {
       color: #d4d4d8;
-      font-size: 1.75rem;
-      text-align: center;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
       transition: color 0.2s ease;
     }
 
-    .mobile-nav a:hover {
+    .mobile-menu a:hover {
       color: #e11d48;
     }
 
-    /* Hide sidebar on mobile */
+    /* Show hamburger on mobile, hide sidebar */
     @media (max-width: 768px) {
-      .sidebar {
-        display: none;
-      }
-
-      .mobile-nav-button {
-        display: block;
+      .mobile-nav {
+        display: flex;
       }
     }
   </style>
@@ -184,17 +173,20 @@
 
 <body>
 
-  <button class="mobile-nav-button" aria-label="Toggle navigation" id="mobile-nav-toggle">
-    <i class="bi bi-list"></i>
-  </button>
-
-  <nav class="mobile-nav" id="mobile-nav">
-    <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
-    <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
-    <a href="projects.html" aria-label="Projects"><i class="bi bi-briefcase-fill"></i></a>
-    <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
-    <a href="https://github.com/dswinkdev" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-    <a href="https://www.linkedin.com/in/daswink" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+  <!-- Mobile Hamburger Menu -->
+<nav class="mobile-nav">
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="mobile-menu" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/dswinkdev" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/daswink" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.dswinkgfx.com" target="_blank" rel="noopener noreferrer">Design Portfolio</a>
+    </div>
   </nav>
 
   <div class="contact-section">
@@ -225,28 +217,29 @@
   </div>
 
   <!-- Sidebar Icons (desktop only) -->
-  <div class="sidebar">
+<div class="sidebar">
     <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
     <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
     <a href="projects.html" aria-label="Projects"><i class="bi bi-briefcase-fill"></i></a>
     <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
     <a href="https://github.com/dswinkdev" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
     <a href="https://www.linkedin.com/in/daswink" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <a href="https://www.dswinkgfx.com" target="_blank" aria-label="Design Portfolio"><i class="bi bi-globe-americas"></i></a>
   </div>
+  
 
   <script>
-    const toggleBtn = document.getElementById('mobile-nav-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-    toggleBtn.addEventListener('click', () => {
-      mobileNav.classList.toggle('show');
-    });
-
-    // Optional: Close mobile nav when clicking a link inside it
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('show');
-      });
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+      if (mobileMenu.hasAttribute('hidden')) {
+        mobileMenu.removeAttribute('hidden');
+      } else {
+        mobileMenu.setAttribute('hidden', '');
+      }
     });
   </script>
 
