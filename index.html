@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derricko Swink | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/DS-favicon3.ico" />
+  <meta name="keywords"
+    content="Derricko Swink, Software Developer, Graphic Design, Java, Full-Stack, Web Development" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: #0e0e0e;
+      color: #f4f4f5;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      background: #0e0e0e;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: #e11d48;
+    }
+
+    .hero p {
+      color: #d4d4d8;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-custom {
+      background-color: #e11d48;
+      border: none;
+      color: white;
+      padding: 0.5rem 0.5rem;
+      border-radius: 40px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .btn-custom:hover {
+      background-color: #be123c;
+    }
+
+    .hero-image img {
+      max-width: 450px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(225, 29, 72, 0.4);
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 999;
+    }
+
+    .sidebar a {
+      color: #d4d4d8;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .sidebar a:hover {
+      color: #e11d48;
+    }
+
+    #projects {
+      background: #0e0e0e;
+    }
+
+    #projects h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 4rem;
+      color: #fafafa;
+    }
+
+    .card {
+      background-color: #222;
+      border: none;
+      transition: transform 0.3s ease;
+      padding-bottom: 1rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-body {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .card-title {
+      font-weight: 700;
+      color: #e11d48;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      color: #e5e7eb;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .card-img-top {
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    figure {
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: #a1a1aa;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .hero-content {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+
+      .card-body {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+
+      .hero-image img {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      #mobile-nav-toggle {
+        display: block;
+      }
+    }
+
+    /* Mobile navigation styles */
+    .mobile-nav {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+      display: none;
+      /* hidden on desktop */
+      flex-direction: column;
+      align-items: flex-end;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .hamburger {
+      background: transparent;
+      border: none;
+      color: #d4d4d8;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      margin-top: 0.5rem;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-menu a {
+      color: #d4d4d8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.2s ease;
+    }
+
+    .mobile-menu a:hover {
+      color: #e11d48;
+    }
+
+    /* Show hamburger on mobile, hide sidebar */
+    @media (max-width: 768px) {
+      .mobile-nav {
+        display: flex;
+      }
+    }
+
+    .video-thumb {
+      position: relative;
+      display: inline-block;
+      max-width: 600px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .video-thumb img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .video-thumb .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: url('https://img.icons8.com/ios-filled/100/ffffff/play--v1.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+    }
+
+    .video-thumb:hover .play-button {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Mobile Hamburger Menu -->
+  <nav class="mobile-nav">
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="mobile-menu" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/dswinkdev" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/daswink" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.dswinkgfx.com" target="_blank" rel="noopener noreferrer">Design Portfolio</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transforming <span>Ideas</span><br />Into<span> Digital Reality</span></h1>
+      <p>
+        Hi, I’m Derricko Swink — a creative technologist, senior graphic designer, and software engineer driven by
+        meaningful digital experiences.
+      </p>
+      <a href="#projects" class="btn btn-custom">My Projects</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/Derricko-Swink.jpg" alt="Derricko Swink" class="img-fluid" />
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container">
+    <h2 class="text-center">Project Highlights</h2>
+    <div class="row g-5">
+
+    <!-- EvenTrack Artifact -->
+<div class="col-md-6">
+  <div class="card text-light shadow-lg h-100">
+    <figure>
+      <a href="https://youtu.be/mElTleCq7fs" target="_blank" rel="noopener noreferrer">
+        <img src="assets/logo_crowd.png" class="card-img-top" alt="EvenTrack Thumbnail" />
+      </a>
+      <figcaption class="image-caption small">
+        Project Objective: Android UI/UX Redesign + Real-Time Event Tracking + SMS Notifications
+      </figcaption>
+    </figure>
+
+    <div class="card-body">
+      <h3 class="card-title">EvenTrack</h3>
+      <p class="card-text">
+        <i>EvenTrack</i> is a mobile event management app built using Android Studio and Firebase, designed to help users stay organized 
+        through intelligent planning, reminders, and real-time notifications. Initially created as a class project, 
+        it has since grown into a polished prototype with expanded functionality and cleaner UX.
+      </p>
+
+      <ul class="card-text">
+        <li>📱 <strong>Android Frontend:</strong> Built using Java and XML layouts in Android Studio for native performance.</li>
+        <li>🔥 <strong>Firebase Backend:</strong> Integrates real-time database and cloud messaging for syncing and alerting users instantly.</li>
+        <li>💬 <strong>SMS Alerts:</strong> Sends SMS notifications to users for scheduled events and reminders.</li>
+        <li>🎨 <strong>Custom UI Design:</strong> Redesigned with visual hierarchy, cohesive color schemes, and intuitive navigation.</li>
+      </ul>
+
+      <a href="https://youtu.be/mElTleCq7fs" target="_blank" class="btn btn-custom mb-3"
+        rel="noopener noreferrer">Watch Code Review</a>
+
+      <img src="assets/sax.png" class="card-img-top" alt="Student presenting prototype" />
+
+      <h3 class="card-title">Original Prototype</h3>
+      <p class="card-text">
+        The original <strong>EvenTrack</strong> prototype was developed early in my computer science journey. It featured a basic UI 
+        that allowed users to input an event title, time, date, and a personal note. Despite its simplicity, the project laid the foundation 
+        for a more robust solution and helped me better understand Android components and activity lifecycle.
+      </p>
+
+      <p class="card-text">
+        As my development skills matured, I incrementally introduced more advanced features such as recurring events, 
+        category tagging, and an improved visual layout to better align with user-centered design principles.
+      </p>
+
+      <img src="assets/original_prototype.png" class="card-img-top" alt="EvenTrack - Initial Development Screenshot" />
+      <p class="small text-light mt-2">
+        View the full C++ source code on <a href="https://github.com/dswinkdev/EvenTrack" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </p>
+
+      <h3 class="card-title">Enhanced Prototype</h3>
+      <img src="assets/enhanced_prototype.png" class="card-img-top" alt="EvenTrack - Enhanced UI Screenshot" />
+      <p class="card-text">
+        The latest prototype includes improved performance, responsive layout adjustments, and a fully restructured UI/UX flow. 
+        Through Firebase integration, users now enjoy real-time syncing of event data, while the addition of SMS alerts brings timely reminders 
+        to their fingertips.
+      </p>
+
+      <p class="card-text">
+        A cohesive visual design system was introduced, using purposeful color schemes and iconography to improve 
+        the application's accessibility and usability. Buttons and typography were optimized for mobile responsiveness and visual clarity.
+      </p>
+
+      <img src="assets/color schemes.png" class="card-img-top" alt="EvenTrack Color Palette" />
+      <img src="assets/EvenTrack_text.jpg" class="card-img-top" alt="EvenTrack Feature Highlights" />
+      <img src="assets/EvenTrack_buttons.png" class="card-img-top" alt="EvenTrack Custom Buttons UI" />
+
+      <h3 class="card-title">Future Enhancements</h3>
+      <p class="card-text">
+        My long-term vision for <i>EvenTrack</i> includes integration with Google Calendar and Outlook, voice command features, 
+        and an AI-powered suggestion engine that adapts to user habits and recommends optimal event times and reminders. 
+        Additional enhancements may include collaborative event planning, task tracking, and user authentication for multi-device access.
+      </p>
+    </div>
+  </div>
+</div>
+
+      <!-- Course Navigator Pro Artifact -->
+<div class="col-md-6">
+  <div class="card text-light shadow-lg h-100">
+    <figure>
+      <a href="https://youtu.be/ObTQsi6Gslo" target="_blank" rel="noopener noreferrer">
+        <img src="assets/CourseNavigatorPro_code2.jpg" class="card-img-top"
+          alt="Course Navigator Pro Thumbnail" />
+      </a>
+      <figcaption class="image-caption small">
+        Project Objective: Java Conversion + Algorithm &amp; Database Enhancement + Future Enhancements
+      </figcaption>
+    </figure>
+
+    <div class="card-body">
+      <h3 class="card-title">Course Navigator Pro</h3>
+      <p class="card-text">
+        <i>Course Navigator Pro</i> is the enhanced, full-stack evolution of the original ABC University advising tool.
+        Developed for my <strong>CS-499 Computer Science Capstone</strong>, this version integrates modern data structures
+        and backend technologies to deliver a scalable, efficient, and user-friendly academic advising experience.
+      </p>
+
+      <ul class="card-text">
+        <li>🌳 <strong>AVL Tree Implementation:</strong> Replaced the original BST with a self-balancing AVL Tree to maintain O(log n) time for all operations, even with large datasets.</li>
+        <li>🧠 <strong>Java Rewrite:</strong> Refactored the entire application into a modular Java-based system, applying object-oriented programming principles.</li>
+        <li>🗃️ <strong>MongoDB Integration:</strong> Integrated a NoSQL backend for persistent, scalable course and user data management.</li>
+        <li>🛠️ <strong>Capstone Focus:</strong> Delivered as a capstone artifact with full pseudocode, runtime analysis, and future deployment planning.</li>
+      </ul>
+
+      <a href="https://www.youtube.com/watch?v=ObTQsi6Gslo" target="_blank" class="btn btn-custom mb-3"
+        rel="noopener noreferrer">Watch Code Review</a>
+
+      <img src="assets/student.jpg" class="card-img-top" alt="Student coding" />
+
+      <h3 class="card-title">Original Code (C++): ABC University</h3>
+      <p class="card-text">
+        <strong>ABC University</strong> is a C++ console application created for an academic project. It acts as a simple 
+        advising system where users can load course data, print a sorted course list, and search for individual course 
+        details. The system utilizes a <strong>Binary Search Tree (BST)</strong> to optimize data storage and retrieval.
+      </p>
+      <ul class="card-text">
+        <li>📥 <strong>Load Course Data:</strong> Parses CSV files into structured course records and inserts them into the BST.</li>
+        <li>📋 <strong>Sorted Course List:</strong> Uses in-order traversal to print all courses in alphanumeric order.</li>
+        <li>🔍 <strong>Search Details:</strong> Allows users to search by course number and view its title and prerequisites.</li>
+        <li>🧠 <strong>Efficient Retrieval:</strong> BST enables fast lookups with O(log n) time in balanced conditions.</li>
+        <li>🧩 <strong>Modular Structure:</strong> Built using well-defined structs and classes for Course, Node, and BST.</li>
+      </ul>
+
+      <a href="https://github.com/dswinkdev/ABCU/blob/main/ProjectTwo.cpp" target="_blank" rel="noopener noreferrer">
+        <img src="assets/ABC University_BST.png" class="card-img-top mt-2"
+          alt="ABC University C++ BST Program Screenshot" />
+      </a>
+      <p class="small text-light mt-2">
+        View the full C++ source code on <a href="https://github.com/dswinkdev/ABCU" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </p>
+
+      <h3 class="card-title">Enhanced Code (Java + MongoDB)</h3>
+      <img src="assets/AVLtreeCode.png" class="card-img-top" alt="Course Navigator - AVL Tree Code" />
+
+      <p class="small text-light mt-2">
+        View the full C++ source code on <a href="https://github.com/dswinkdev/ABCU" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </p>
+
+      <p class="card-text">
+        One of the most significant upgrades was the implementation of an <strong>AVL tree</strong>, a self-balancing binary search tree that ensures 
+        optimal time complexity for insertions, deletions, and lookups by maintaining strict height balance. Combined with a 
+        <strong>MongoDB database</strong>, this enhancement enabled the application to store and query course data efficiently in real-time, 
+        making the system suitable for academic institutions managing hundreds of courses.
+      </p>
+    </div>
+
+    <div class="card-body">
+      <h3 class="card-title">Future Enhancements</h3>
+      <p class="card-text">
+        Future iterations of Course Navigator Pro may include a graphical user interface (GUI) or web front-end, user authentication,
+        integration with REST APIs, and real-time data syncing across devices. These improvements will support broader deployment
+        in advising departments and enhance usability for students and administrators.
+      </p>
+      <img src="assets/CNPro_UI.png" class="card-img-top" alt="Course Navigator UI Design Concept" />
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- Sidebar Icons (desktop only) -->
+  <div class="sidebar">
+    <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
+    <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
+    <a href="projects.html" aria-label="Projects"><i class="bi bi-briefcase-fill"></i></a>
+    <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="https://github.com/dswinkdev" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/daswink" target="_blank" aria-label="LinkedIn"><i
+        class="bi bi-linkedin"></i></a>
+    <a href="https://www.dswinkgfx.com" target="_blank" aria-label="Design Portfolio"><i
+        class="bi bi-globe-americas"></i></a>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+      if (mobileMenu.hasAttribute('hidden')) {
+        mobileMenu.removeAttribute('hidden');
+      } else {
+        mobileMenu.setAttribute('hidden', '');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
