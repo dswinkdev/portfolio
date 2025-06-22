@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Navigator Pro | Artifact</title>
+  <link rel="icon" href="assets/DS-favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #f4f4f5;
+    }
+    body {
+      padding-bottom: 5rem;
+    }
+    nav.navbar {
+      background-color: #111;
+    }
+    .navbar-nav .nav-link {
+      color: #f4f4f5;
+      margin-right: 1rem;
+      font-weight: 600;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-toggler:focus {
+      color: #e11d48;
+    }
+    .section-title {
+      font-weight: 900;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #e11d48;
+    }
+    .screenshot {
+      width: 60%;
+      display: block;
+      margin: 2rem auto 0.5rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+    .screenshot-caption {
+      font-size: 0.95rem;
+      color: #a1a1aa;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .video-link {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .video-link a {
+      color: #38bdf8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .video-link a:hover {
+      color: #e11d48;
+    }
+    footer {
+      flex-shrink: 0;
+      background-color: #111;
+      color: #a1a1aa;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      width: 100%;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand text-light fw-bold" href="index.html">Derricko Swink</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About Me</a>
+          <a class="nav-link" href="self-assessment.html">Self-Assessment</a>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Artifacts</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="eventrack.html">EvenTrack</a></li>
+              <li><a class="dropdown-item active" href="course-navigator.html">Course Navigator Pro</a></li>
+            </ul>
+          </div>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5 mb-5">
+    <h1 class="section-title">Course Navigator Pro Artifact</h1>
+    <p class="text-center lead">Academic Advising Console Application</p>
+
+    <section>
+      <h2 class="section-title">Code Review</h2>
+      <p>This walkthrough highlights the C++ logic, data validation layers, and how external testing methods were used to identify vulnerabilities. Runtime analysis and enhancements for tree balancing and error handling are also explained.</p>
+      <div class="video-link">
+        <a href="https://youtu.be/YOUR_COURSE_NAVIGATOR_REVIEW" target="_blank">Watch Code Review on YouTube</a>
+      </div>
+      <img src="assets/course_navigator_code_review_placeholder.jpg" alt="Course Navigator code walkthrough" class="screenshot">
+      <p class="screenshot-caption">Course Navigator Code Review</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Original Artifact</h2>
+      <p>The initial version of Course Navigator was a simple text-based C++ app that printed course data in order. It lacked error handling and assumed data files were perfectly formatted with no edge-case considerations.</p>
+      <img src="assets/course_navigator_original_placeholder.jpg" alt="Original CLI interface" class="screenshot">
+      <p class="screenshot-caption">Original Console App</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Enhancement</h2>
+      <p>The project was restructured to support file validation, modular pseudocode logic, prerequisite verification, and the use of three data structures: vectors, hash tables, and binary search trees. These upgrades significantly improved runtime and maintainability.</p>
+      <img src="assets/course_navigator_enhancement_placeholder.jpg" alt="Enhanced features with structured logic" class="screenshot">
+      <p class="screenshot-caption">Improved Program Structure</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Future Enhancements</h2>
+      <p>Plans include building a web-based interface for live course lookup, integrating backend validation using a real-time database, and allowing export features for advising reports. This would further streamline advisor workflows and enhance student planning tools.</p>
+      <img src="assets/course_navigator_future_placeholder.jpg" alt="Web interface mockup for Course Navigator" class="screenshot">
+      <p class="screenshot-caption">Vision for the Future</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Derricko Swink | SNHU CS-499 Capstone Portfolio</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

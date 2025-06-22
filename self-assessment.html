@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self-Assessment | Derricko Swink</title>
+  <link rel="icon" type="image/x-icon" href="assets/DS-favicon.ico" />
+
+  <!-- Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      background: #000000;
+      color: #f4f4f5;
+    }
+
+    body {
+      min-height: 100vh;
+      flex: 1 0 auto;
+      padding-bottom: 5rem;
+    }
+
+    nav.navbar {
+      background-color: #111;
+    }
+
+    /* Desktop nav link default */
+    .navbar-nav .nav-link {
+      color: #f4f4f5;
+      margin-right: 1rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    /* Desktop nav link hover and focus */
+    .navbar-nav .nav-link:hover,
+    .navbar-toggler:focus {
+      color: #e11d48;
+    }
+
+    /* Desktop nav active link */
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.active:focus,
+    .navbar-nav .nav-link.active:hover {
+      color: #e11d48;
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .section-title {
+      font-weight: 900;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .card {
+      background-color: #1f1f1f;
+      border: none;
+      border-radius: 16px;
+    }
+
+    .card-text li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .screenshot {
+      display: block;
+      margin: 2rem auto 0.5rem auto;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+    }
+
+    .screenshot-caption {
+      font-size: 0.95rem;
+      color: #a1a1aa;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .about-img.small {
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .text-danger {
+      color: #e11d48 !important;
+    }
+
+    #self-assessment {
+      flex: 1 0 auto;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 999;
+    }
+
+    .sidebar a {
+      color: #d4d4d8;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .sidebar a:hover {
+      color: #e11d48;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+    }
+
+    footer {
+      flex-shrink: 0;
+      background-color: #111;
+      color: #a1a1aa;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      width: 100%;
+      position: relative;
+    }
+
+    .about-img.small.screenshot {
+  margin-bottom: 2rem;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand text-light fw-bold" href="index.html">Derricko Swink</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About Me</a>
+          <a class="nav-link active" href="self-assessment.html">Self-Assessment</a>
+
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Artifacts
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="eventrack.html">EvenTrack</a></li>
+              <li><a class="dropdown-item" href="course-navigator.html">Course Navigator Pro</a></li>
+            </ul>
+          </div>
+
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <section id="self-assessment" class="container mt-5 mb-5">
+    <h2 class="section-title">Professional Self-Assessment</h2>
+
+    <div class="card text-light p-4 shadow-lg">
+
+      <p>
+        As I complete my Bachelor of Science in Computer Science at Southern New Hampshire University, I can confidently say this journey has transformed me. I began with a background in design and creativity but evolved into a multifaceted software engineer capable of building complete, user-centered systems.
+      </p>
+
+      <img src="assets/code.jpg" alt="Capstone landing page screenshot"
+        class="about-img small screenshot" />
+
+      <p>
+        Throughout this program, I developed proficiency in full-stack development, object-oriented programming, algorithm optimization, and mobile application development. My two featured artifacts—<strong>EvenTrack</strong> and <strong>Course Navigator Pro</strong>—exemplify how I’ve advanced technically and strategically in applying what I’ve learned to real-world projects.
+      </p>
+
+      <a href="eventrack.html">
+        <img src="assets/Eventrack_logo_crowd.png" alt="EvenTrack UI screenshot" class="about-img small screenshot" />
+      </a>
+      <p class="screenshot-caption">EvenTrack</p>
+
+      <a href="course-navigator.html">
+        <img src="assets/CourseNavigatorPro_code2.jpg" alt="Course Navigator Pro code implementation"
+          class="about-img small screenshot" />
+      </a>
+      <p class="screenshot-caption">Course Navigator Pro</p>
+
+      <h4 class="mt-4 text-danger">Key Competency Reflections</h4>
+      <ul class="card-text">
+        <li><strong>Collaborative Environments:</strong> I embraced Git and GitHub to manage source control, enabling smooth collaboration on personal projects and version tracking. I also used peer and instructor feedback loops to refine my work.</li>
+        <li><strong>Communication:</strong> I honed my communication skills by creating narrated code reviews and presentations to explain my design decisions, implementation strategies, and security considerations.</li>
+        <li><strong>Algorithmic and Data Structures:</strong> My transition from basic BSTs to a self-balancing AVL Tree in Java shows my ability to refactor and optimize algorithms for better runtime efficiency (O(log n)).</li>
+        <li><strong>Tools and Technologies:</strong> I’ve worked with Android Studio, Firebase, MongoDB, Java, C++, Git, and Bootstrap—all of which were used to build scalable, functional prototypes showcased on this site.</li>
+        <li><strong>Security Mindset:</strong> I applied secure coding standards such as input validation, data integrity checks, and Firebase authentication best practices across my applications. My final project also includes external vulnerability scanning insights.</li>
+      </ul>
+
+      <a href="eventrack.html">
+        <img src="assets/Projects_avi.png" alt="EvenTrack UI screenshot" class="about-img small screenshot" />
+      </a>
+      <p class="screenshot-caption">Github</p>
+
+      <p>
+        Moving forward, I plan to expand my technical portfolio, pursue a master’s degree or certifications in software engineering and AI, and mentor others transitioning into tech. I aim to become a software architect who blends design, code, and compassion to build tech that serves communities—just like my own.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Sidebar (Desktop Only) -->
+  <div class="sidebar">
+    <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
+    <a href="about.html"><i class="bi bi-person-fill"></i></a>
+    <a href="self-assessment.html"><i class="bi bi-journal-code"></i></a>
+    <a href="eventrack.html"><i class="bi bi-calendar-event"></i></a>
+    <a href="course-navigator.html"><i class="bi bi-diagram-3-fill"></i></a>
+    <a href="contact.html"><i class="bi bi-chat-dots-fill"></i></a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <small>&copy; 2025 Derricko Swink | SNHU CS-499 Capstone Portfolio</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"> </script>
+
+</body>
+
+</html>
