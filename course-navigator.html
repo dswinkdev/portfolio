@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Course Navigator Pro | Artifact</title>
   <link rel="icon" type="image/x-icon" href="assets/DS-favicon.ico" />
-  <meta name="description"
-    content="Course Navigator Pro Artifact - Academic Advising Console Application by Derricko Swink featuring runtime analysis and data structure enhancements." />
+  <meta name="description" content="Course Navigator Pro Artifact - Academic Advising Console Application by Derricko Swink featuring runtime analysis and data structure enhancements." />
   <meta name="author" content="Derricko Swink" />
 
   <!-- Bootstrap & Fonts -->
@@ -113,6 +112,14 @@
       margin-bottom: 2rem;
     }
 
+    .project-section h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
     .project-section p {
       color: #d4d4d8;
       font-size: 1.1rem;
@@ -180,9 +187,7 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid px-4">
       <a class="navbar-brand text-light fw-bold" href="index.html">Derricko Swink</a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
@@ -226,11 +231,7 @@
 
     <section>
       <h2 class="section-title">Code Review</h2>
-      <p>
-        This walkthrough highlights the C++ logic, data validation layers, and how external testing methods were used
-        to identify vulnerabilities. Runtime analysis and enhancements for BST tree balancing and error handling are also
-        explained.
-      </p>
+      <p>This walkthrough highlights the C++ logic, data validation layers, and how external testing methods were used to identify vulnerabilities. Runtime analysis and enhancements for BST tree balancing and error handling are also explained.</p>
       <div class="video-link">
         <iframe src="https://www.youtube.com/embed/ObTQsi6Gslo" title="Course Navigator Pro Code Review Video" allowfullscreen></iframe>
       </div>
@@ -239,54 +240,28 @@
 
     <section>
       <h2 class="section-title">Original Artifact</h2>
-      <p>
-        This artifact began as a course requirement at <span class="about-highlight">ABC University</span>. The original 
-        application was built in <span class="about-highlight">C++</span> and designed to read a CSV of course data, organize it 
-        using a simple Binary Search Tree (BST), and allow users to view courses in sorted order or fetch prerequisites.
-      </p>
-      <p>
-        While the core concept demonstrated an understanding of BST logic, the app lacked scalability, edge case handling, 
-        and modern data persistence. It also assumed perfectly formatted input files, limiting its real-world application.
-      </p>
+      <p>This artifact began as a course requirement at <span class="about-highlight">ABC University</span>. The original application was built in <span class="about-highlight">C++</span> and designed to read a CSV of course data, organize it using a simple Binary Search Tree (BST), and allow users to view courses in sorted order or fetch prerequisites.</p>
+      <p>While the core concept demonstrated an understanding of BST logic, the app lacked scalability, edge case handling, and modern data persistence. It also assumed perfectly formatted input files, limiting its real-world application.</p>
       <img src="assets/CourseNavigatorPro_img.png" alt="Original CLI interface" class="about-img small" />
       <p class="screenshot-caption">Original Console App in C++ with BST Sorting</p>
     </section>
 
     <section>
       <h2 class="section-title">Enhancement</h2>
-      <p>
-        For my enhancement, I performed a complete overhaul of the architecture. The entire codebase was 
-        <span class="about-highlight">ported from C++ to Java</span> to enable cross-platform use and better code modularity.
-      </p>
-      <p>
-        The original BST was replaced with a self-balancing <span class="about-highlight">AVL Tree</span>, which improves 
-        performance in cases of heavy insertions or searches. This restructuring ensures that lookups, inserts, and traversals 
-        remain efficient even with thousands of records.
-      </p>
-      <p>
-        Additionally, a <span class="about-highlight">MongoDB database</span> was introduced to manage persistent course data 
-        and allow for expanded record structures (such as multiple prerequisites, department metadata, etc.). These 
-        enhancements prepare the application for a full-stack transition.
-      </p>
+      <p>For my enhancement, I performed a complete overhaul of the architecture. The entire codebase was <span class="about-highlight">ported from C++ to Java</span> to enable cross-platform use and better code modularity.</p>
+      <p>The original BST was replaced with a self-balancing <span class="about-highlight">AVL Tree</span>, which improves performance in cases of heavy insertions or searches. This restructuring ensures that lookups, inserts, and traversals remain efficient even with thousands of records.</p>
+      <p>Additionally, a <span class="about-highlight">MongoDB database</span> was introduced to manage persistent course data and allow for expanded record structures (such as multiple prerequisites, department metadata, etc.). These enhancements prepare the application for a full-stack transition.</p>
       <img src="assets/CNPro_AVL Tree.png" alt="Enhanced logic with AVL Tree and database" class="about-img small" />
       <p class="screenshot-caption">Improved Architecture with Java, AVL Trees, and MongoDB</p>
     </section>
 
     <section>
-  <h2 class="section-title">Future Enhancements</h2>
-  <p>
-    Looking ahead, I plan to add a <span class="about-highlight">user-friendly interface</span> that enables students and advisors to interact with course data visually, rather than through a command-line interface.
-  </p>
-  <p>
-    The user interface will allow users to search for courses, view prerequisite chains, sort by department, and flag courses for advising discussions. I envision implementing interactive elements such as dropdown filters, autocomplete search, and collapsible prerequisite trees.
-  </p>
-  <p>
-    This UI will be supported by RESTful APIs connected to a backend MongoDB database, ensuring data stays consistent and up to date. Future goals also include <span class="about-highlight">authentication features</span> for advisors, role-based access control, and deploying the platform to a cloud environment (Firebase or AWS) for scalability and global access.
-  </p>
-  <img src="assets/CNPro_UI.png" alt="Mockup UI concept for Course Navigator" class="about-img small" />
-  <p class="screenshot-caption">Vision for a Full-Stack Cloud-Based Advising Tool with UI</p>
-</section>
-
+      <h2 class="section-title">Future Enhancements</h2>
+      <p>Looking ahead, I plan to build a web-based interface that connects to the backend using RESTful APIs. This UI would allow advisors to perform course searches, view prerequisites, and export advising reports in real-time.</p>
+      <p>Future goals also include <span class="about-highlight">authentication features</span> for advisors, role-based access controls, and deploying the system to a cloud environment such as Firebase or AWS for full scalability and availability.</p>
+      <img src="assets/CNPro_UI.png" alt="Mockup UI concept for Course Navigator" class="about-img small" />
+      <p class="screenshot-caption">Vision for a Full-Stack Cloud-Based Advising Tool</p>
+    </section>
   </main>
 
   <!-- Footer -->
