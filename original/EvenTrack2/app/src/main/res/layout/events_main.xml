@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Event Name Input -->
+    <EditText
+        android:id="@+id/editTextEventName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Event Name" />
+
+    <!-- Event Date Input -->
+    <EditText
+        android:id="@+id/editTextEventDate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Event Date" />
+
+    <!-- Event Location Input -->
+    <EditText
+        android:id="@+id/editTextEventLocation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Event Location" />
+
+    <!-- First Row of Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/buttonSaveEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Event"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/buttonDeleteEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Event" />
+    </LinearLayout>
+
+    <!-- Second Row of Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/buttonShowEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Events"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/buttonUpdateEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Event" />
+    </LinearLayout>
+
+    <!-- ListView to display events -->
+    <ListView
+        android:id="@+id/listViewEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <!-- Home Button at the bottom -->
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textColor="@android:color/white" />
+</LinearLayout>

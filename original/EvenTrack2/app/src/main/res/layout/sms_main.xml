@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tvSMSHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SMS Permission"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvSMSDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This app needs permission to send SMS notifications for low inventory and event reminders."
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnRequestSMSPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grant Permission"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>
