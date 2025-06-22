@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EvenTrack | Artifact</title>
   <link rel="icon" type="image/x-icon" href="assets/DS-favicon.ico" />
-  <meta name="description"
-    content="EvenTrack Artifact - Mobile event tracking app by Derricko Swink using Android Studio, Firebase, and modern design practices." />
+  <meta name="description" content="EvenTrack Artifact - Mobile event tracking app by Derricko Swink using Android Studio, Firebase, and modern design practices." />
   <meta name="author" content="Derricko Swink" />
 
   <!-- Bootstrap & Fonts -->
@@ -16,14 +15,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
   <style>
-    html,
-    body {
+    html, body {
       height: 100%;
       margin: 0;
       display: flex;
       flex-direction: column;
       font-family: 'Inter', sans-serif;
-      background-color: #000000;
+      background-color: #000;
       color: #f4f4f5;
     }
 
@@ -46,12 +44,8 @@
       color: #e11d48;
     }
 
-    .navbar-nav .nav-link.active,
-    .navbar-nav .nav-link.active:hover,
-    .navbar-nav .nav-link.active:focus {
+    .navbar-nav .nav-link.active {
       color: #e11d48;
-      background-color: transparent;
-      box-shadow: none;
     }
 
     .mobile-nav {
@@ -87,7 +81,6 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 1.1rem;
-      transition: color 0.2s ease;
     }
 
     .mobile-menu a:hover {
@@ -116,6 +109,7 @@
       color: #ffffff;
       font-weight: 900;
       text-align: center;
+      margin-top: 3rem;
       margin-bottom: 2rem;
     }
 
@@ -153,17 +147,36 @@
     }
 
     .video-link {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
 
     .screenshot-caption {
       color: #a1a1aa;
       text-align: center;
       margin-top: 0.5rem;
       font-size: 0.95rem;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 2rem;
+      color: #f4f4f5;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #333;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2c2c2c;
     }
 
     footer {
@@ -184,9 +197,7 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid px-4">
       <a class="navbar-brand text-light fw-bold" href="index.html">Derricko Swink</a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -195,16 +206,13 @@
           <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link" href="about.html">About Me</a>
           <a class="nav-link" href="self-assessment.html">Self-Assessment</a>
-
           <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Artifacts</a>
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Artifacts</a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item active" href="eventrack.html">EvenTrack</a></li>
               <li><a class="dropdown-item" href="course-navigator.html">Course Navigator Pro</a></li>
             </ul>
           </div>
-
           <a class="nav-link" href="contact.html">Contact</a>
         </div>
       </div>
@@ -227,16 +235,13 @@
     </div>
   </nav>
 
-  <!-- Main Section -->
   <main class="project-section">
     <h1>EvenTrack Artifact</h1>
-    <p class="text-center lead">Mobile App for Managing Events &amp; Notifications</p>
+    <p class="text-center lead">Mobile App for Managing Events & Notifications</p>
 
     <section>
       <h2 class="section-title">Code Review</h2>
-      <p>This walkthrough highlights the Android logic, Firebase integration, and how permission handling and external
-        testing methods were applied. It also demonstrates the use of <span class="about-highlight">SensorManager</span> and
-        activity lifecycle optimizations.</p>
+      <p>This walkthrough highlights the Android logic, Firebase integration, and how permission handling and external testing methods were applied. It also demonstrates the use of <span class="about-highlight">SensorManager</span> and activity lifecycle optimizations.</p>
       <div class="video-link">
         <iframe src="https://www.youtube.com/embed/mElTleCq7fs" title="EvenTrack Code Review Video" allowfullscreen></iframe>
       </div>
@@ -244,58 +249,122 @@
     </section>
 
     <section>
-  <h2 class="section-title">Original Artifact</h2>
-  <p>
-    The original version of EvenTrack was a static prototype UI with minimal login functionality or real-time event
-    management. It served primarily to demonstrate layout ideas, screen transitions, and gaining hands-on experience
-    of building a mobile application from top to bottom.
-  </p>
-  <img src="assets/Figma_AS.jpg" alt="EvenTrack original color schemes" class="about-img small" />
-        <p class="screenshot-caption">Initial UI Mocks</p>
-<img src="assets/EvenTrack_color-schemes_original.png" alt="EvenTrack original color schemes" class="about-img small" />
-<img src="assets/Eventrack_original_prototype.png" alt="EvenTrack original prototype screen" class="about-img small" />
-  <div class="text-center mt-4">
-    <a href="https://github.com/dswinkdev/portfolio/tree/main/original/EvenTrack2" target="_blank"
-       style="color: #38bdf8; font-weight: bold; text-decoration: none;">
-      View Original Files on GitHub <i class="bi bi-box-arrow-up-right"></i>
-    </a>
-  </div><img src="assets/EvenTrack_original_text_heading.png" alt="EvenTrack original buttons layout" class="about-img small" />
-  <img src="assets/EvenTrack_buttons_original.png" alt="EvenTrack original buttons layout" class="about-img small" />
-</section>
-
+      <h2 class="section-title">Original Artifact</h2>
+      <p>The original version of EvenTrack was a static prototype UI with minimal login functionality or real-time event management. It demonstrated layout ideas, screen transitions, and hands-on mobile development foundations.</p>
+      <p class="screenshot-caption">Initial UI Mocks</p>
+      <img src="assets/EvenTrack_color-schemes_original.png" alt="EvenTrack color schemes" class="about-img small" />
+      <img src="assets/Eventrack_original_prototype.png" alt="EvenTrack original prototype" class="about-img small" />
+      <img src="assets/EvenTrack_original_text_heading.png" alt="EvenTrack original text heading" class="about-img small" />
+      <img src="assets/EvenTrack_buttons_original.png" alt="EvenTrack original button layout" class="about-img small" />
+      <div class="text-center mt-4">
+        <a href="https://github.com/dswinkdev/portfolio/tree/main/original/EvenTrack2" target="_blank" style="color: #38bdf8; font-weight: bold; text-decoration: none;">
+          View Original Files on GitHub <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+      </div>
+    </section>
 
     <section>
-  <h2 class="section-title">Enhancement</h2>
-  <p>
-    The enhancement I've given EvenTrack was giving the application a complete UI redesign and transforming the app's look and feel into a more modern,visually appealing, and user-friendly experience. This redesign focuses on improving usability, visual consistency, and overall app flow.
-    Additionally, I integrated <span class="about-highlight">Firebase Authentication</span> for secure user login,
-    and leveraged <span class="about-highlight">Firestore</span> to enable real-time event storage and updates.
-    Permission handling for SMS notifications was implemented to enhance user engagement, while activity lifecycle
-    optimizations ensure efficient app performance on Android devices.
-  </p>
-    <img src="assets/VS_AS.jpg" alt="Future roadmap and features for EvenTrack" class="about-img small" />
-    <img src="assets/color-schemes_enhanced.png" alt="Future roadmap and features for EvenTrack" class="about-img small" />
-  <img src="assets/EvenTrack_app-mocks.jpeg" alt="Enhanced EvenTrack app functionality" class="about-img small" />
-  <img src="assets/EvenTrack_enhanced_text_heading.png" alt="Enhanced EvenTrack app functionality" class="about-img small" />
-  <img src="assets/EvenTrack_app-mocks.jpeg" alt="Enhanced EvenTrack app functionality" class="about-img small" />
-  <p class="screenshot-caption">Event Tracking App w/ Redesigned UI</p>
-</section>
+      <h2 class="section-title">Enhancement</h2>
+      <p>The redesigned EvenTrack app now features a modern UI, secure Firebase Authentication, Firestore integration, SMS permission handling, and lifecycle-aware architecture. These updates improve both performance and usability.</p>
+      <img src="assets/Figma_AS.jpg" alt="EvenTrack original Figma UI mock" class="about-img small" />
+      <img src="assets/color-schemes_enhanced.png" alt="Enhanced color scheme" class="about-img small" />
+      <img src="assets/EvenTrack_app-mocks.jpeg" alt="Enhanced app mockups" class="about-img small" />
+      <img src="assets/EvenTrack_enhanced_text_heading.png" alt="Enhanced text headings" class="about-img small" />
+      <img src="assets/AndroidStudio-EvenTrack.png" alt="EvenTrack original prototype" class="about-img small" />
+      <img src="assets/AndroidStudio-EvenTrack3.png" alt="EvenTrack original prototype" class="about-img small" />
+      <img src="assets/AndroidStudio-EvenTrack2.png" alt="EvenTrack original prototype" class="about-img small" />
+      <p class="screenshot-caption">Event Tracking App w/ Redesigned UI</p>
+      <div class="text-center mt-4">
+        <a href="https://github.com/dswinkdev/portfolio/tree/main/original/EvenTrack2" 
+           target="_blank" 
+           style="color: #38bdf8; font-weight: bold; text-decoration: none;">
+          View Enhanced Files on GitHub <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+      </div>
+    </section>
 
-<section>
-  <h2 class="section-title">Future Enhancements</h2>
-  <p>
-    Looking ahead, I plan to connect EvenTrack to a <span class="about-highlight">MongoDB</span> database to support
-    greater scalability, flexible data modeling, and improved performance for complex queries. This transition
-    will enable more robust backend functionality and better data management. Additionally, I aim to integrate
-    <span class="about-highlight">push notifications</span> using Firebase Cloud Messaging for timely event alerts,
-    introduce <span class="about-highlight">calendar synchronization</span> for seamless scheduling,
-    and implement <span class="about-highlight">event sharing between users</span> to foster collaboration.
-    These future enhancements will elevate EvenTrack into a comprehensive productivity and event management tool.
-  </p>
-  <img src="assets/AS_MGDB.jpg" alt="Future roadmap and features for EvenTrack" class="about-img small" />
-  <p class="screenshot-caption">Future Roadmap w/ MongoDB Integration & Feature Expansion</p>
-</section>
+    <section>
+      <h2 class="section-title">Checkpoint Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Milestone</th>
+            <th>Enhancement Category</th>
+            <th>Original Issue</th>
+            <th>Changes Made</th>
+            <th>Outcome Demonstrated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Milestone 2</td>
+            <td>Software Design | v1.0</td>
+            <td>Basic UI layout, minimal navigation, no backend</td>
+            <td>Redesigned the UI in Figma, improved screen transitions, and established app layout consistency</td>
+            <td>UI/UX Principles, Design Prototyping</td>
+          </tr>
+          <tr>
+            <td>Milestone 3</td>
+            <td>Application Logic | v1.1</td>
+            <td>Manual event filtering; slow performance</td>
+            <td>Added pagination, debounce filtering, and asynchronous event loading for smoother user experience</td>
+            <td>Efficient Algorithm Implementation</td>
+          </tr>
+          <tr>
+            <td>Milestone 4</td>
+            <td>Data Management | v1.2</td>
+            <td>No backup or cloud database integration</td>
+            <td>Implemented MongoDB Compass for local database management and data visualization</td>
+            <td>Security &amp; Local Database Reliability</td>
+          </tr>
+          <tr>
+            <td>Milestone 5</td>
+            <td>Security &amp; Permissions | v1.3</td>
+            <td>No user authentication or SMS handling</td>
+            <td>Implement Firebase Authentication, permission requests, and SMS notification logic</td>
+            <td>User Privacy, Secure Access, Android Permissions</td>
+          </tr>
+          <tr>
+            <td>Milestone 6</td>
+            <td>Deployment &amp; Feedback | v1.4</td>
+            <td>No real user testing or feedback loop</td>
+            <td>Conduct usability testing, integrate feedback, polish UI, and finalize GitHub &amp; portfolio integration</td>
+            <td>Final QA, Presentation Readiness, Portfolio Publication</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>    
+    
+    <section>
+      <h2 class="section-title">Technical Reflection</h2>
+      <p>
+        I used MongoDB Compass for local database management and data visualization, following 
+        <a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP</a> best practices. 
+        Course concepts from CS 405 and IT 365 guided my implementation of secure APIs, modular design, 
+        and asynchronous flows. Firebase permissions were carefully optimized to balance functionality 
+        and user privacy.
+      </p>
+    </section>
+    
+    <section>
+      <h2 class="section-title">Learning & Outcomes</h2>
+      <ul class="card-text">
+        <li><strong>Collaboration:</strong> Used GitHub for version control and workflow management.</li>
+        <li><strong>Communication:</strong> Created narrated walkthroughs of architectural decisions.</li>
+        <li><strong>Algorithms:</strong> Refined Java-based sorting, filtering, and indexing.</li>
+        <li><strong>Security:</strong> Secured endpoints and used strict input validation.</li>
+        <li><strong>Tools:</strong> Android Studio, Firebase, MongoDB Compass, Express.js, GitHub.</li>
+      </ul>
+    </section>
+    
 
+    <section>
+      <h2 class="section-title">Future Enhancements</h2>
+      <p>Future upgrades include full MongoDB backend connection, push notifications via FCM, Google Calendar integration, and social event sharing. These features will evolve EvenTrack into a full-featured productivity platform.</p>
+      <img src="assets/AS_MGDB.jpg" alt="Future roadmap" class="about-img small" />
+      <img src="assets/AndroidStudio-EvenTrack4.png" alt="Future roadmap" class="about-img small" />
+      <p class="screenshot-caption">Roadmap: MongoDB Integration & Feature Expansion</p>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -303,18 +372,15 @@
     <small>&copy; 2025 Derricko Swink | SNHU CS-499 Capstone Portfolio</small>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
-
     hamburger.addEventListener('click', () => {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
       hamburger.setAttribute('aria-expanded', !expanded);
       mobileMenu.toggleAttribute('hidden');
     });
   </script>
 </body>
-
 </html>
