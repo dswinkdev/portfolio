@@ -128,6 +128,11 @@
       font-size: 3rem;
       font-weight: 900;
       margin-bottom: 1rem;
+      background: #f4f4f5;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
 
     .hero p {
@@ -166,51 +171,51 @@
 <body>
 
   <!-- Desktop Navbar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container-fluid px-4">
-    <a class="navbar-brand text-light fw-bold" href="index.html">Derricko Swink</a>
-    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand text-light fw-bold" href="index.html">Derricko Swink</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About Me</a>
-        <a class="nav-link" href="self-assessment.html">Self-Assessment</a>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About Me</a>
+          <a class="nav-link" href="self-assessment.html">Self-Assessment</a>
 
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">Artifacts</a>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="eventrack.html">EvenTrack</a></li>
-            <li><a class="dropdown-item" href="course-navigator.html">Course Navigator Pro</a></li>
-          </ul>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Artifacts</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="eventrack.html">EvenTrack</a></li>
+              <li><a class="dropdown-item" href="course-navigator.html">Course Navigator Pro</a></li>
+            </ul>
+          </div>
+
+          <a class="nav-link" href="contact.html">Contact</a>
         </div>
-
-        <a class="nav-link" href="contact.html">Contact</a>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Mobile Hamburger Menu -->
-<nav class="mobile-nav">
-  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-    <i class="bi bi-list"></i>
-  </button>
-  <div class="mobile-menu" hidden>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="self-assessment.html">Self-Assessment</a>
-    <strong style="color:#a1a1aa; font-size:0.9rem;">Artifacts</strong>
-    <a href="eventrack.html" style="padding-left: 1rem;">EvenTrack</a>
-    <a href="course-navigator.html" style="padding-left: 1rem;">Course Navigator Pro</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+  <!-- Mobile Hamburger Menu -->
+  <nav class="mobile-nav">
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="mobile-menu" hidden>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="self-assessment.html">Self-Assessment</a>
+      <strong style="color:#a1a1aa; font-size:0.9rem;">Artifacts</strong>
+      <a href="eventrack.html" style="padding-left: 1rem;">EvenTrack</a>
+      <a href="course-navigator.html" style="padding-left: 1rem;">Course Navigator Pro</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">

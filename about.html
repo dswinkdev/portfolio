@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Derricko Swink | Software Engineering Portfolio</title>
+  <title>Derricko Swink | About Me</title>
   <link rel="icon" type="image/x-icon" href="assets/DS-favicon.ico" />
   <meta name="keywords" content="Derricko Swink, Software Developer, CS499, SNHU, Capstone, Portfolio, Java, Firebase" />
-  <meta name="description" content="Derricko Swink's SNHU CS-499 Capstone Portfolio showcasing real-world software engineering projects, including EvenTrack and Course Navigator Pro." />
+  <meta name="description"
+    content="Derricko Swink's SNHU CS-499 Capstone Portfolio showcasing real-world software engineering projects, including EvenTrack and Course Navigator Pro." />
   <meta name="author" content="Derricko Swink" />
 
   <!-- Bootstrap & Fonts -->
@@ -52,92 +53,6 @@
       color: #e11d48;
       background-color: transparent;
       box-shadow: none;
-    }
-
-    .about-section {
-      padding: 5rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-      flex: 1 0 auto;
-    }
-
-    .about-section h1 {
-      font-weight: 900;
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .about-section p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #d4d4d8;
-      margin-bottom: 2rem;
-    }
-
-    .about-highlight {
-      color: #e11d48;
-      font-weight: 700;
-    }
-
-    .about-img {
-      width: 100%;
-      border-radius: 16px;
-      margin: 2rem 0;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-    }
-
-    .about-img.small {
-      width: 60%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .core-competencies {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    .core-competencies li::marker {
-      color: #e11d48;
-    }
-
-    .core-competencies li {
-      color: #f4f4f5;
-      margin-bottom: 0.75rem;
-      font-size: 1.05rem;
-      line-height: 1.6;
-    }
-
-    .sidebar {
-      position: fixed;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      z-index: 999;
-    }
-
-    .sidebar a {
-      color: #d4d4d8;
-      text-decoration: none;
-      font-size: 1.5rem;
-      transition: color 0.2s ease;
-    }
-
-    .sidebar a:hover {
-      color: #e11d48;
-    }
-
-    @media (max-width: 768px) {
-      .sidebar {
-        display: none;
-      }
     }
 
     .mobile-nav {
@@ -188,6 +103,67 @@
       .mobile-nav {
         display: flex;
       }
+    }
+
+    .about-section {
+      padding: 5rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex: 1 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: left;
+    }
+
+    .about-section h1 {
+      font-weight: 900;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #d4d4d8;
+      margin-bottom: 2rem;
+    }
+
+    .about-highlight {
+      color: #e11d48;
+      font-weight: 700;
+    }
+
+    /* Removed box-shadow here */
+    .about-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
+    .about-img.small {
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(225, 29, 72, 0.4);
+    }
+
+    .core-competencies {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .core-competencies li::marker {
+      color: #e11d48;
+    }
+
+    .core-competencies li {
+      color: #f4f4f5;
+      margin-bottom: 0.75rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
     }
 
     footer {
@@ -252,7 +228,7 @@
   </nav>
 
   <!-- Main Content -->
-  <div class="about-section">
+  <section class="about-section">
     <h1>About Me</h1>
 
     <p>
@@ -275,8 +251,8 @@
     </p>
 
     <p>
-  My passion for user experience and scalable solutions eventually led me to pursue a career in technology. While my design career continues to thrive, I recently attended commencement at <span class="about-highlight">Southern New Hampshire University (SNHU)</span> and look forward to officially graduating with a <strong>Bachelor of Science in Computer Science</strong>, concentrating in <strong>Software Engineering</strong>. My academic journey has included immersive study in <strong>Data Structures</strong>, <strong>Algorithms</strong>, <strong>Databases</strong>, and <strong>Object-Oriented Software Design</strong>, preparing me to make an impact at the intersection of creativity and engineering.
-</p>
+      My passion for user experience and scalable solutions eventually led me to pursue a career in technology. While my design career continues to thrive, I recently attended commencement at <span class="about-highlight">Southern New Hampshire University (SNHU)</span> and look forward to officially graduating with a <strong>Bachelor of Science in Computer Science</strong>, concentrating in <strong>Software Engineering</strong>. My academic journey has included immersive study in <strong>Data Structures</strong>, <strong>Algorithms</strong>, <strong>Databases</strong>, and <strong>Object-Oriented Software Design</strong>, preparing me to make an impact at the intersection of creativity and engineering.
+    </p>
 
     <img src="assets/DSwink_SNHU 2025 Graduation1.jpg" alt="Derricko Swink Graduation Photo" class="about-img small" />
 
@@ -308,17 +284,7 @@
       <li>Cloud & Data Foundations: AWS basics, database design, data structures & algorithms</li>
       <li>Accessibility & Inclusive Design</li>
     </ul>
-  </div>
-
-  <!-- Sidebar Icons
-  <div class="sidebar">
-    <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
-    <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
-    <a href="self-assessment.html" aria-label="Self-Assessment"><i class="bi bi-journal-code"></i></a>
-    <a href="eventrack.html" aria-label="EvenTrack"><i class="bi bi-calendar-event"></i></a>
-    <a href="course-navigator.html" aria-label="Course Navigator Pro"><i class="bi bi-diagram-3-fill"></i></a>
-    <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
-  </div> -->
+  </section>
 
   <!-- Footer -->
   <footer>
