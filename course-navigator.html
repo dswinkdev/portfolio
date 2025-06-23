@@ -303,7 +303,18 @@
 
     <section>
       <h2 class="section-title">Enhancement</h2>
-      <p>The redesigned EvenTrack app now features a modern UI, secure Firebase Authentication, Firestore integration, SMS permission handling, and lifecycle-aware architecture. These updates improve both performance and usability.</p>
+  <p>
+    The Course Navigator Pro application began as a C++ console program utilizing a basic Binary Search Tree (BST) for storing and retrieving course information. While functional, this approach lacked balance and scalability, leading to inefficiencies during search operations as data volumes grew. To improve performance, the codebase was migrated to Java, enabling better modularization and compatibility with modern development tools and frameworks.
+  </p>
+  <p>
+    A key enhancement involved replacing the unbalanced BST with a self-balancing AVL Tree. This change significantly improved search, insertion, and deletion operations by maintaining logarithmic time complexity, even as the course dataset expanded. The AVL implementation ensured that the application could handle a larger and more dynamic set of courses without sacrificing performance.
+  </p>
+  <p>
+    Additionally, MongoDB was integrated as the application's NoSQL backend. Unlike traditional relational databases, MongoDB allows for flexible schema design, making it ideal for storing course records that may vary in structure or expand over time. Its document-based model simplified data retrieval and allowed the application to evolve quickly without complex migrations.
+  </p>
+  <p>
+    These enhancements not only addressed performance and scalability concerns but also modernized the application's architecture. With Java's object-oriented design, AVL's efficiency, and MongoDB's scalability, Course Navigator Pro is now positioned for full-stack expansion, cloud deployment, and future integration of features such as role-based access control, advisor authentication, and real-time data analytics.
+  </p>
       <img src="assets/IntelliJ_MGDB.jpg" alt="EvenTrack original Figma UI mock" class="about-img small" />
       <img src="assets/CNPro_AVL Tree.png" alt="Enhanced app mockups" class="about-img small" />
       <img src="assets/CNPro_MongoDB.png" alt="EvenTrack original prototype" class="about-img small" />
