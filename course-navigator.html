@@ -293,7 +293,7 @@
 
     <section>
       <h2 class="section-title">Original Artifact</h2>
-      <p>This artifact began as a course requirement at <span class="about-highlight">ABC University</span>. The original application was built in <span class="about-highlight">C++</span> and designed to read a CSV of course data, organize it using a simple Binary Search Tree (BST), and allow users to view courses in sorted order or fetch prerequisites.</p>
+      <p>This artifact began as a course requirement at <span class="about-highlight"><i>ABC University</i></span>. The original application was built in C++ and designed to read a CSV of course data, organize it using a simple Binary Search Tree (BST), and allow users to view courses in sorted order or fetch prerequisites.</p>
       <p>While the core concept demonstrated an understanding of BST logic, the app lacked scalability, edge case handling, and modern data persistence. It also assumed perfectly formatted input files, limiting its real-world application.</p>
       <img src="assets/CourseNavigatorPro_img.png" alt="Original CLI interface" class="about-img small" />
       <p class="screenshot-caption">Original Console App in C++ w/ BST Sorting</p>
@@ -347,33 +347,47 @@
     <section>
       <h2 class="section-title">Technical Reflection</h2>
       <p>
-        I used MongoDB Compass for local database management and data visualization, following 
-        <a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP</a> best practices. 
-        Course concepts from CS 405 and IT 365 guided my implementation of secure APIs, modular design, 
-        and asynchronous flows. Firebase permissions were carefully optimized to balance functionality 
-        and user privacy.
+        Throughout the development of Course Navigator Pro, I migrated the original C++ codebase to Java to improve maintainability and apply object-oriented design principles. To enhance performance, I replaced the basic Binary Search Tree with a self-balancing AVL Tree, optimizing search efficiency and data retrieval.
+      </p>
+      <p>
+        For backend data persistence, I integrated MongoDB and configured it to synchronize course records dynamically. This integration allowed for scalable, cloud-ready data management, supporting seamless updates and real-time syncing.
+      </p>
+      <p>
+        Security was a key consideration: I implemented secure RESTful API endpoints with strict input validation, following 
+        <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer">OWASP</a> best practices. Modular asynchronous flows were designed to maximize responsiveness, and Firebase permissions were fine-tuned to ensure balanced functionality and user privacy.
       </p>
     </section>
     
     <section>
       <h2 class="section-title">Learning & Outcomes</h2>
-      <ul class="card-text">
-        <li><strong>Collaboration:</strong> Used GitHub for version control and workflow management.</li>
-        <li><strong>Communication:</strong> Created narrated walkthroughs of architectural decisions.</li>
-        <li><strong>Algorithms:</strong> Refined Java-based sorting, filtering, and indexing.</li>
-        <li><strong>Security:</strong> Secured endpoints and used strict input validation.</li>
-        <li><strong>Tools:</strong> Android Studio, Firebase, MongoDB Compass, Express.js, GitHub.</li>
+      <ul class="card-text" style="color: inherit;">
+        <li style="color: inherit;"><strong>Collaboration:</strong> Managed code versions and coordinated workflows using GitHub.</li>
+        <li style="color: inherit;"><strong>Communication:</strong> Produced narrated walkthroughs explaining key architectural decisions.</li>
+        <li style="color: inherit;"><strong>Algorithms:</strong> Implemented AVL trees for balanced, efficient course data operations.</li>
+        <li style="color: inherit;"><strong>Databases:</strong> Integrated MongoDB for NoSQL data persistence and synchronization.</li>
+        <li style="color: inherit;"><strong>Security:</strong> Enforced secure endpoints with robust input validation and role-based access concepts.</li>
+        <li style="color: inherit;"><strong>Tools:</strong> Utilized Android Studio, Firebase, MongoDB Compass, Express.js, and GitHub for full-stack development.</li>
       </ul>
+    
+      <style>
+        ul.card-text li::marker {
+          color: #e11d48; /* Red color for bullet points */
+        }
+      </style>
     </section>
-
+    
     <section>
       <h2 class="section-title">Future Enhancements</h2>
-      <p>Looking ahead, I plan to build a web-based interface that connects to the backend using RESTful APIs. This UI would allow advisors to perform course searches, view prerequisites, and export advising reports in real-time.</p>
-      <p>Future goals also include authentication features for advisors, role-based access controls, and deploying the system to a cloud environment such as Firebase or AWS for full scalability and availability.</p>
+      <p>
+        The next phase includes developing a comprehensive web-based interface connected via RESTful APIs. This UI will empower academic advisors to efficiently search courses, review prerequisites, and generate advising reports in real-time.
+      </p>
+      <p>
+        Additional planned features involve implementing authentication for advisors, enforcing role-based access controls, and deploying the application on cloud platforms like Firebase or AWS to ensure full scalability, availability, and security.
+      </p>
       <img src="assets/CNPro_UI.png" alt="Mockup UI concept for Course Navigator" class="about-img small" />
       <img src="assets/CNPro_UI_courses.png" alt="Mockup UI concept for Course Navigator" class="about-img small" />
       <p class="screenshot-caption">Vision for a Full-Stack Cloud-Based Advising Tool</p>
-    </section>
+    </section>    
   </main>
 
   <!-- Footer -->
