@@ -142,23 +142,32 @@
 
     .sidebar {
       position: fixed;
-      right: 1rem;
       top: 50%;
+      left: 1rem;
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
+      background-color: rgba(17, 17, 17, 0.95);
+      padding: 1rem;
+      border-radius: 12px;
       z-index: 999;
+      box-shadow: 0 0 10px rgba(225, 29, 72, 0.3);
     }
 
     .sidebar a {
       color: #d4d4d8;
-      text-decoration: none;
       font-size: 1.5rem;
-      transition: color 0.2s ease;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    .sidebar a:hover {
+    .sidebar a:hover,
+    .sidebar a:focus {
+      color: #e11d48;
+    }
+
+    .sidebar a.active {
       color: #e11d48;
     }
 
@@ -177,43 +186,6 @@
       font-size: 0.9rem;
       width: 100%;
     }
-
-     .sidebar {
-  position: fixed;
-  top: 50%;
-  left: 1rem;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  background-color: rgba(17, 17, 17, 0.95);
-  padding: 1rem;
-  border-radius: 12px;
-  z-index: 999;
-  box-shadow: 0 0 10px rgba(225, 29, 72, 0.3);
-}
-
-.sidebar a {
-  color: #d4d4d8;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.sidebar a:hover,
-.sidebar a:focus {
-  color: #e11d48;
-}
-
-.sidebar a.active {
-  color: #e11d48;
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
-}
   </style>
 </head>
 
@@ -284,12 +256,12 @@
 
   <!-- Sidebar Navigation -->
   <div class="sidebar">
-    <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
-    <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
-    <a href="self-assessment.html" aria-label="Self-Assessment"><i class="bi bi-journal-code"></i></a>
-    <a href="eventrack.html" aria-label="EvenTrack"><i class="bi bi-calendar-event"></i></a>
-    <a href="course-navigator.html" aria-label="Course Navigator Pro"><i class="bi bi-diagram-3-fill"></i></a>
-    <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="index.html" aria-label="Home" title="Home"><i class="bi bi-house-door-fill"></i></a>
+    <a href="about.html" aria-label="About" title="About"><i class="bi bi-person-fill"></i></a>
+    <a href="self-assessment.html" aria-label="Self-Assessment" title="Self-Assessment"><i class="bi bi-journal-code"></i></a>
+    <a href="eventrack.html" aria-label="EvenTrack" title="EvenTrack"><i class="bi bi-calendar-event"></i></a>
+    <a href="course-navigator.html" aria-label="Course Navigator Pro" title="Course Navigator"><i class="bi bi-diagram-3-fill"></i></a>
+    <a href="contact.html" class="active" aria-label="Contact" title="Contact"><i class="bi bi-chat-dots-fill"></i></a>
   </div>
 
   <!-- Bootstrap JS -->
