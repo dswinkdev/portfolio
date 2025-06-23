@@ -96,6 +96,10 @@
       .mobile-nav {
         display: flex;
       }
+
+      .sidebar {
+        display: none;
+      }
     }
 
     main.project-section {
@@ -105,19 +109,13 @@
       margin: auto;
     }
 
+    .project-section h1,
     .section-title {
       color: #ffffff;
       font-weight: 900;
       text-align: center;
+      margin-top: 3rem;
       margin-bottom: 2rem;
-    }
-
-    .project-section h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
-      color: #ffffff;
     }
 
     .project-section p {
@@ -169,6 +167,26 @@
       margin-bottom: 2rem;
     }
 
+    table {
+      width: 100%;
+      margin-top: 2rem;
+      border-collapse: collapse;
+      color: #f4f4f5;
+    }
+
+    table, th, td {
+      border: 1px solid #333;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2c2c2c;
+    }
+
     footer {
       flex-shrink: 0;
       background-color: #111;
@@ -179,47 +197,45 @@
       width: 100%;
     }
 
-     .sidebar {
-  position: fixed;
-  top: 50%;
-  left: 1rem;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  background-color: rgba(17, 17, 17, 0.95);
-  padding: 1rem;
-  border-radius: 12px;
-  z-index: 999;
-  box-shadow: 0 0 10px rgba(225, 29, 72, 0.3);
-}
+    .sidebar {
+      position: fixed;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      background-color: rgba(17, 17, 17, 0.95);
+      padding: 1rem;
+      border-radius: 12px;
+      z-index: 999;
+      box-shadow: 0 0 10px rgba(225, 29, 72, 0.3);
+    }
 
-.sidebar a {
-  color: #d4d4d8;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    .sidebar a {
+      color: #d4d4d8;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-.sidebar a:hover,
-.sidebar a:focus {
-  color: #e11d48;
-}
+    .sidebar a:hover,
+    .sidebar a:focus {
+      color: #e11d48;
+    }
 
-.sidebar a.active {
-  color: #e11d48;
-}
+    .sidebar a.active {
+      color: #e11d48;
+    }
 
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
+    ul.card-text li::marker {
+    color: #e11d48; 
+    font-weight: bold;
   }
-}
   </style>
 </head>
 
 <body>
-
   <!-- Desktop Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid px-4">
@@ -298,31 +314,31 @@
         <tbody>
           <tr>
             <td>Milestone 1</td>
-            <td>UI Redesign | v1.0</td>
-            <td>Basic UI layout, minimal navigation, no backend</td>
-            <td>Redesigned mobile application UI in Figma, improved screen transitions, and established app layout consistency</td>
-            <td>UI/UX Principles, Design Prototyping, Wireframes</td>
-          </tr>  
+            <td>Algorithms & Data Structures | v1.0</td>
+            <td>Initial implementation in C++ using basic Binary Search Tree logic</td>
+            <td>Converted core logic from C++ to Java and restructured codebase for maintainability</td>
+            <td>Language Migration, Object-Oriented Design, Refactoring</td>
+          </tr>
           <tr>
             <td>Milestone 2</td>
-            <td>UI Redesign | v1.1</td>
-            <td>Basic UI layout, minimal navigation, no backend</td>
-            <td>Redesigned mobile application UI in Figma, improved screen transitions, and established app layout consistency</td>
-            <td>UI/UX Principles, Design Prototyping, Color Theory</td>
-          </tr>  
+            <td>Algorithms & Data Structures | v1.1</td>
+            <td>Unbalanced Binary Search Tree causing inefficient search operations</td>
+            <td>Implemented AVL Tree for self-balancing and optimized retrieval of course data</td>
+            <td>Advanced Data Structures, Search Optimization, Algorithm Efficiency</td>
+          </tr>
           <tr>
             <td>Milestone 3</td>
-            <td>Application Logic | v1.2</td>
-            <td>Manual event filtering; slow performance</td>
-            <td>Restructing code for optimized performance</td>
-            <td>Efficient Algorithm Implementation</td>
+            <td>Databases | v1.2</td>
+            <td>No backend database integration; data persistence was missing</td>
+            <td>Configured MongoDB and started linking course records to backend schema</td>
+            <td>NoSQL Integration, Backend Architecture, Data Modeling</td>
           </tr>
           <tr>
             <td>Milestone 4</td>
-            <td>Data Management | v1.3</td>
-            <td>No backup or cloud database integration</td>
-            <td>Implemented MongoDB Compass for local database management and data visualization. Also completed UI redesign</td>
-            <td>Database & UI Redesign</td>
+            <td>Databases | v1.3</td>
+            <td>Lack of cloud-based storage and user-course synchronization</td>
+            <td>Fully integrated MongoDB with Java codebase and implemented dynamic course syncing</td>
+            <td>Database Synchronization, Full-Stack Integration, Cloud Readiness</td>
           </tr>
         </tbody>
       </table>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EvenTrack | Artifact</title>
+  <title>Artifact | EvenTrack</title>
   <link rel="icon" type="image/x-icon" href="assets/DS-favicon.ico" />
   <meta name="description" content="EvenTrack Artifact - Mobile event tracking app by Derricko Swink using Android Studio, Firebase, and modern design practices." />
   <meta name="author" content="Derricko Swink" />
@@ -225,6 +225,11 @@
     display: none;
   }
 }
+
+ul.card-text li::marker {
+    color: #e11d48; 
+    font-weight: bold;
+  }
   </style>
 </head>
 
@@ -387,7 +392,6 @@
       </ul>
     </section>
     
-
     <section>
       <h2 class="section-title">Future Enhancements</h2>
       <p>Future upgrades include full MongoDB backend connection, push notifications via FCM, Google Calendar integration, and social event sharing. These features will evolve EvenTrack into a full-featured productivity platform.</p>
