@@ -17,17 +17,17 @@
     body {
       height: 100%;
       margin: 0;
-      display: flex;
-      flex-direction: column;
       font-family: 'Inter', sans-serif;
       background: #000000;
       color: #f4f4f5;
+      display: flex;
+      flex-direction: column;
     }
 
-    body {
-      min-height: 100vh;
-      flex: 1 0 auto;
-      padding-bottom: 5rem;
+    body > main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     nav.navbar {
@@ -58,7 +58,7 @@
     section#contact {
       flex: 1 0 auto;
       max-width: 600px;
-      margin: 3rem auto 3rem auto;
+      margin: 3rem auto;
       padding: 0 1rem;
     }
 
@@ -172,11 +172,10 @@
       flex-shrink: 0;
       background-color: #111;
       color: #a1a1aa;
-      text-align: center;
       padding: 1rem 0;
+      text-align: center;
       font-size: 0.9rem;
       width: 100%;
-      position: relative;
     }
   </style>
 </head>
@@ -214,39 +213,32 @@
     </div>
   </nav>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container">
-    <h2 class="section-title">Get in Touch</h2>
-    <div class="card text-light shadow-lg">
-      <form action="mailto:derricko@example.com" method="post" enctype="text/plain" novalidate>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required placeholder="Your full name" />
+  <main>
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="card text-light shadow-lg">
+        <form action="mailto:derricko@example.com" method="post" enctype="text/plain" novalidate>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name" />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
 
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
 
-      <div class="contact-info mt-4">
-        <p>Email me directly at <a href="mailto:dswinkdev@gmail.com">dswinkdev@gmail.com</a></p>
-        <p>Or connect on <a href="https://www.linkedin.com/in/daswink/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        <div class="contact-info mt-4">
+          <p>Email me directly at <a href="mailto:dswinkdev@gmail.com">dswinkdev@gmail.com</a></p>
+          <p>Or connect on <a href="https://www.linkedin.com/in/daswink/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Sidebar
-  <div class="sidebar">
-    <a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill"></i></a>
-    <a href="about.html" aria-label="About"><i class="bi bi-person-fill"></i></a>
-    <a href="self-assessment.html" aria-label="Self-Assessment"><i class="bi bi-journal-code"></i></a>
-    <a href="eventrack.html" aria-label="EvenTrack"><i class="bi bi-calendar-event"></i></a>
-    <a href="course-navigator.html" aria-label="Course Navigator Pro"><i class="bi bi-diagram-3-fill"></i></a>
-    <a href="contact.html" aria-label="Contact"><i class="bi bi-chat-dots-fill"></i></a>
-  </div> -->
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
