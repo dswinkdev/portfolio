@@ -295,7 +295,13 @@
       <h2 class="section-title">Original Artifact</h2>
       
       <p>This artifact began as a course requirement at <span class="about-highlight"><i>ABC University</i></span>. The original application was built in C++ and designed to read a CSV of course data, organize it using a simple Binary Search Tree (BST), and allow users to view courses in sorted order or fetch prerequisites.</p>
-      <p>While the core concept demonstrated an understanding of BST logic, the app lacked scalability, edge case handling, and modern data persistence. It also assumed perfectly formatted input files, limiting its real-world application.</p>
+
+<p>While the core concept demonstrated an understanding of BST logic, the app lacked scalability, edge case handling, and modern data persistence. It also assumed perfectly formatted input files, which significantly limited its real-world application and introduced vulnerability to malformed data.</p>
+
+<p>Critically, the original version did not utilize a database—meaning all course data had to be reloaded each session, and no user-specific or dynamic data could be saved or retrieved. For a system like <span class="about-highlight"><i>Course Navigator Pro</i></span>, which is intended to support academic advising workflows, this was a major limitation. Persistent storage through a database is essential to enable course tracking, real-time updates, historical data access, and user synchronization across sessions and devices.</p>
+
+<p>To address this, MongoDB was selected as the backend solution during the enhancement phase. Its NoSQL, document-based structure provided the flexibility needed to manage varying course and prerequisite data while enabling scalable storage, fast retrieval, and smooth integration with a modern Java-based application. This shift laid the foundation for a more robust, full-stack advising tool ready for future cloud deployment.</p>
+
           </section>
 
     <img src="assets/CNPro_Cpp.png" alt="Course Navigator Pro AVL tree" class="about-img small" />
@@ -304,7 +310,7 @@
     <section>
       <h2 class="section-title">Enhancement</h2>
   <p>
-    The Course Navigator Pro application began as a C++ console program utilizing a basic Binary Search Tree (BST) for storing and retrieving course information. While functional, this approach lacked balance and scalability, leading to inefficiencies during search operations as data volumes grew. To improve performance, the codebase was migrated to Java, enabling better modularization and compatibility with modern development tools and frameworks.
+    The <span class="about-highlight"><i>Course Navigator Pro</i></span> application began as a C++ console program utilizing a basic Binary Search Tree (BST) for storing and retrieving course information. While functional, this approach lacked balance and scalability, leading to inefficiencies during search operations as data volumes grew. To improve performance, the codebase was migrated to Java, enabling better modularization and compatibility with modern development tools and frameworks.
   </p>
   <p>
     A key enhancement involved replacing the unbalanced BST with a self-balancing AVL Tree. This change significantly improved search, insertion, and deletion operations by maintaining logarithmic time complexity, even as the course dataset expanded. The AVL implementation ensured that the application could handle a larger and more dynamic set of courses without sacrificing performance.
