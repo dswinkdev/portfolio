@@ -46,13 +46,8 @@
       color: #e11d48;
     }
 
-    .navbar-nav .nav-link.active,
-    .navbar-nav .nav-link.active:focus,
-    .navbar-nav .nav-link.active:hover {
+    .navbar-nav .nav-link.active {
       color: #e11d48;
-      background-color: transparent;
-      outline: none;
-      box-shadow: none;
     }
 
     section#contact {
@@ -91,15 +86,14 @@
       padding: 0.75rem 1rem;
       margin-top: 0.5rem;
       font-size: 1rem;
-      font-family: 'Inter', sans-serif;
       transition: border-color 0.3s ease;
     }
 
     input:focus,
     textarea:focus {
       border-color: #e11d48;
-      outline: none;
       background-color: #1a1a1a;
+      outline: none;
     }
 
     button.btn-submit {
@@ -111,10 +105,9 @@
       border-radius: 30px;
       margin-top: 1.5rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      display: block;
       width: 100%;
       font-weight: 700;
+      transition: background-color 0.3s ease;
     }
 
     button.btn-submit:hover {
@@ -132,7 +125,6 @@
       color: #e11d48;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s ease;
     }
 
     .contact-info a:hover {
@@ -158,15 +150,11 @@
     .sidebar a {
       color: #d4d4d8;
       font-size: 1.5rem;
-      text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .sidebar a:hover,
-    .sidebar a:focus {
-      color: #e11d48;
-    }
-
+    .sidebar a:focus,
     .sidebar a.active {
       color: #e11d48;
     }
@@ -206,7 +194,6 @@
           <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link" href="about.html">About Me</a>
           <a class="nav-link" href="self-assessment.html">Self-Assessment</a>
-
           <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">Artifacts</a>
@@ -215,7 +202,6 @@
               <li><a class="dropdown-item" href="course-navigator.html">Course Navigator Pro</a></li>
             </ul>
           </div>
-
           <a class="nav-link active" href="contact.html">Contact</a>
         </div>
       </div>
@@ -227,46 +213,38 @@
     <section id="contact" class="container">
       <h2 class="section-title">Get in Touch</h2>
       <div class="card text-light shadow-lg">
-        <form action="mailto:dswinkdev@gmail.com" method="post" enctype="text/plain" novalidate>
+
+        <!-- FormSpree -->
+        <form action="https://formspree.io/f/xjkrrzwz" method="POST">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required placeholder="Your full name" />
-
+        
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
-
+        
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
-
+        
           <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-
-        <div class="contact-info mt-4">
-          <p>Email me directly at <a href="mailto:dswinkdev@gmail.com">dswinkdev@gmail.com</a></p>
-          <p>Or connect on <a href="https://www.linkedin.com/in/daswink/" target="_blank"
-              rel="noopener noreferrer">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
+        </form>        
 
   <!-- Footer -->
   <footer>
     <small>&copy; 2025 Derricko Swink | SNHU CS-499 Capstone Portfolio</small>
   </footer>
 
-  <!-- Sidebar Navigation -->
+  <!-- Sidebar -->
   <div class="sidebar">
-    <a href="index.html" aria-label="Home" title="Home"><i class="bi bi-house-door-fill"></i></a>
-    <a href="about.html" aria-label="About" title="About"><i class="bi bi-person-fill"></i></a>
-    <a href="self-assessment.html" aria-label="Self-Assessment" title="Self-Assessment"><i class="bi bi-journal-code"></i></a>
-    <a href="eventrack.html" aria-label="EvenTrack" title="EvenTrack"><i class="bi bi-calendar-event"></i></a>
-    <a href="course-navigator.html" aria-label="Course Navigator Pro" title="Course Navigator"><i class="bi bi-diagram-3-fill"></i></a>
-    <a href="contact.html" class="active" aria-label="Contact" title="Contact"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="index.html" title="Home"><i class="bi bi-house-door-fill"></i></a>
+    <a href="about.html" title="About"><i class="bi bi-person-fill"></i></a>
+    <a href="self-assessment.html" title="Self-Assessment"><i class="bi bi-journal-code"></i></a>
+    <a href="eventrack.html" title="EvenTrack"><i class="bi bi-calendar-event"></i></a>
+    <a href="course-navigator.html" title="Course Navigator Pro"><i class="bi bi-diagram-3-fill"></i></a>
+    <a href="contact.html" class="active" title="Contact"><i class="bi bi-chat-dots-fill"></i></a>
   </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>
