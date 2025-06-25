@@ -232,6 +232,22 @@
     color: #e11d48; 
     font-weight: bold;
   }
+
+  .red-bullets li {
+  color: white; 
+}
+
+.red-bullets li::marker {
+  color: red;  
+}
+
+  .future-enhancements {
+    color: white;
+  }
+
+  .future-enhancements .red-bullets li::marker {
+    color: red;
+  }
   </style>
 </head>
 
@@ -418,6 +434,25 @@
       </p>
       <p>
         Additional planned features involve implementing authentication for advisors, enforcing role-based access controls, and deploying the application on cloud platforms like Firebase or AWS to ensure full scalability, availability, and security.
+      </p>
+      <p>
+        A reporting engine will be added to allow advisors to export reports (PDF/CSV) detailing student progress, prerequisite chains, and curriculum compliance. Integration with tools such as Google Drive or Microsoft 365 will offer centralized access to advising documents and schedules.
+      </p>
+      <p>
+        For larger institutions, multi-tenancy support will be introduced, enabling the system to serve multiple departments or campuses with isolated datasets and access privileges. This will include customizable branding, department-specific course schemas, and tenant-level analytics.
+      </p>
+      <p>
+        To enhance automation, the system will also feature:
+      </p>
+      <ul class="red-bullets">
+        <li>Auto-suggestion of courses based on completed prerequisites</li>
+        <li>Visualization of prerequisite trees using D3.js or Chart.js</li>
+        <li>Advisor chat integration powered by AI (e.g., OpenAI API)</li>
+        <li>Scheduled data backups with encrypted storage</li>
+        <li>Support for mobile-responsive design for advising on-the-go</li>
+      </ul>
+      <p>
+        These upgrades are designed to evolve Course Navigator Pro into a full-service, institution-grade advising system with intelligent insights, real-time responsiveness, and extensibility across a variety of academic use cases.
       </p>
       <img src="assets/CNPro_UI.png" alt="Mockup UI concept for Course Navigator" class="about-img small" />
       <img src="assets/CNPro_UI_courses.png" alt="Mockup UI concept for Course Navigator" class="about-img small" />
