@@ -231,6 +231,23 @@ ul.card-text li::marker {
     font-weight: bold;
     text-align: center;
   }
+
+  .red-bullets li {
+  color: white; 
+}
+
+.red-bullets li::marker {
+  color: red;  
+}
+
+  .future-enhancements {
+    color: white;
+  }
+
+  .future-enhancements .red-bullets li::marker {
+    color: red;
+  }
+</style>
   </style>
 </head>
 
@@ -382,11 +399,7 @@ ul.card-text li::marker {
     <section>
       <h2 class="section-title">Technical Reflection</h2>
       <p>
-        I used MongoDB Compass for local database management and data visualization, following 
-        <a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP</a> best practices. 
-        Course concepts from CS 405 and IT 365 guided my implementation of secure APIs, modular design, 
-        and asynchronous flows. Firebase permissions were carefully optimized to balance functionality 
-        and user privacy.
+        I used MongoDB Compass for local database management and intuitive data visualization, ensuring data integrity and query efficiency while adhering to the principles outlined in the <a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP</a> Top Ten security standards. Concepts from <span class="about-highlight"><i>CS-340: Client/Server Development</i></span> and <span class="about-highlight"><i>CS-465: Full Stack Development I</i></span> informed my approach to designing secure, scalable APIs, emphasizing separation of concerns, modular architecture, and non-blocking asynchronous flows for improved performance and maintainability. Additionally, I strategically configured Firebase authentication and Firestore security rules to enforce role-based access controls, striking a careful balance between application functionality and robust user data protection.
       </p>
     </section>
     
@@ -401,13 +414,27 @@ ul.card-text li::marker {
       </ul>
     </section>
     
-    <section>
+    <section class="future-enhancements">
       <h2 class="section-title">Future Enhancements</h2>
-      <p>Future upgrades include full MongoDB backend connection, push notifications via FCM, Google Calendar integration, and social event sharing. These features will evolve EvenTrack into a full-featured productivity platform.</p>
+      <p>
+        Future development plans for EvenTrack include a full transition from local database use with MongoDB Compass to a scalable, cloud-based backend using MongoDB Atlas. This will enable secure, real-time data synchronization across devices and streamline remote access for distributed users. 
+        Integration of <strong>Firebase Cloud Messaging (FCM)</strong> will provide push notifications to keep users informed with event updates and reminders. A planned <strong>Google Calendar integration</strong> will allow users to synchronize their personal schedules with EvenTrack events, enhancing productivity and time management.
+      </p>
+      <p>
+        A <strong>social event sharing</strong> feature will allow users to invite others, share event details across platforms, and track RSVP responses. Additional enhancements on the roadmap include:
+        <ul class="red-bullets">
+          <li>Offline data persistence for uninterrupted access</li>
+          <li>Custom user dashboards with personalized insights</li>
+          <li>Dark mode support for improved accessibility</li>
+          <li>Advanced analytics dashboards to monitor event trends and user engagement</li>
+        </ul>
+        These upgrades are designed to transform EvenTrack from a basic event tracker into a fully-featured, intelligent productivity platform with an emphasis on usability, collaboration, and data-driven decision-making.
+      </p>
       <img src="assets/AS_MGDB.jpg" alt="Future roadmap" class="about-img small" />
       <img src="assets/AndroidStudio-EvenTrack4.png" alt="Future roadmap" class="about-img small" />
-      <p class="screenshot-caption">Roadmap: MongoDB Integration for Database Expansion</p>
+      <p class="screenshot-caption">Roadmap: Transition from Local MongoDB to Cloud-Based Atlas Deployment</p>
     </section>
+    
   </main>
 
   <!-- Footer -->
